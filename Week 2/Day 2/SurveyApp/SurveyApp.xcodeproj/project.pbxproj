@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A13FB09D1BA8516500BD5E1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A13FB09C1BA8516500BD5E1D /* main.m */; };
+		A13FB0A01BA8516500BD5E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A13FB09F1BA8516500BD5E1D /* AppDelegate.m */; };
+		A13FB0A31BA8516500BD5E1D /* AnswersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A13FB0A21BA8516500BD5E1D /* AnswersViewController.m */; };
+		A13FB0A61BA8516500BD5E1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13FB0A41BA8516500BD5E1D /* Main.storyboard */; };
+		A13FB0A81BA8516500BD5E1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13FB0A71BA8516500BD5E1D /* Images.xcassets */; };
+		A13FB0AB1BA8516500BD5E1D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A13FB0A91BA8516500BD5E1D /* LaunchScreen.xib */; };
+		A13FB0B71BA8516500BD5E1D /* SurveyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A13FB0B61BA8516500BD5E1D /* SurveyAppTests.m */; };
+		A13FB0C21BA851C200BD5E1D /* SurveyDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A13FB0C11BA851C200BD5E1D /* SurveyDataSource.m */; };
+		A13FB0C51BA8526100BD5E1D /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A13FB0C41BA8526100BD5E1D /* QuestionsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A13FB0B11BA8516500BD5E1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A13FB08F1BA8516500BD5E1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A13FB0961BA8516500BD5E1D;
+			remoteInfo = SurveyApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A13FB0971BA8516500BD5E1D /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13FB09B1BA8516500BD5E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A13FB09C1BA8516500BD5E1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A13FB09E1BA8516500BD5E1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A13FB09F1BA8516500BD5E1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A13FB0A11BA8516500BD5E1D /* AnswersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswersViewController.h; sourceTree = "<group>"; };
+		A13FB0A21BA8516500BD5E1D /* AnswersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnswersViewController.m; sourceTree = "<group>"; };
+		A13FB0A51BA8516500BD5E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A13FB0A71BA8516500BD5E1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A13FB0AA1BA8516500BD5E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A13FB0B01BA8516500BD5E1D /* SurveyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13FB0B51BA8516500BD5E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A13FB0B61BA8516500BD5E1D /* SurveyAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurveyAppTests.m; sourceTree = "<group>"; };
+		A13FB0C01BA851C100BD5E1D /* SurveyDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyDataSource.h; sourceTree = "<group>"; };
+		A13FB0C11BA851C200BD5E1D /* SurveyDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyDataSource.m; sourceTree = "<group>"; };
+		A13FB0C31BA8526100BD5E1D /* QuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsViewController.h; sourceTree = "<group>"; };
+		A13FB0C41BA8526100BD5E1D /* QuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A13FB0941BA8516500BD5E1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A13FB0AD1BA8516500BD5E1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A13FB08E1BA8516500BD5E1D = {
+			isa = PBXGroup;
+			children = (
+				A13FB0991BA8516500BD5E1D /* SurveyApp */,
+				A13FB0B31BA8516500BD5E1D /* SurveyAppTests */,
+				A13FB0981BA8516500BD5E1D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A13FB0981BA8516500BD5E1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A13FB0971BA8516500BD5E1D /* SurveyApp.app */,
+				A13FB0B01BA8516500BD5E1D /* SurveyAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A13FB0991BA8516500BD5E1D /* SurveyApp */ = {
+			isa = PBXGroup;
+			children = (
+				A13FB09E1BA8516500BD5E1D /* AppDelegate.h */,
+				A13FB09F1BA8516500BD5E1D /* AppDelegate.m */,
+				A13FB0C71BA852C400BD5E1D /* Model */,
+				A13FB0C61BA852BE00BD5E1D /* View */,
+				A13FB0A41BA8516500BD5E1D /* Main.storyboard */,
+				A13FB0A71BA8516500BD5E1D /* Images.xcassets */,
+				A13FB0A91BA8516500BD5E1D /* LaunchScreen.xib */,
+				A13FB09A1BA8516500BD5E1D /* Supporting Files */,
+			);
+			path = SurveyApp;
+			sourceTree = "<group>";
+		};
+		A13FB09A1BA8516500BD5E1D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A13FB09B1BA8516500BD5E1D /* Info.plist */,
+				A13FB09C1BA8516500BD5E1D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A13FB0B31BA8516500BD5E1D /* SurveyAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				A13FB0B61BA8516500BD5E1D /* SurveyAppTests.m */,
+				A13FB0B41BA8516500BD5E1D /* Supporting Files */,
+			);
+			path = SurveyAppTests;
+			sourceTree = "<group>";
+		};
+		A13FB0B41BA8516500BD5E1D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A13FB0B51BA8516500BD5E1D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A13FB0C61BA852BE00BD5E1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A13FB0C31BA8526100BD5E1D /* QuestionsViewController.h */,
+				A13FB0C41BA8526100BD5E1D /* QuestionsViewController.m */,
+				A13FB0A11BA8516500BD5E1D /* AnswersViewController.h */,
+				A13FB0A21BA8516500BD5E1D /* AnswersViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A13FB0C71BA852C400BD5E1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A13FB0C01BA851C100BD5E1D /* SurveyDataSource.h */,
+				A13FB0C11BA851C200BD5E1D /* SurveyDataSource.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A13FB0961BA8516500BD5E1D /* SurveyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A13FB0BA1BA8516500BD5E1D /* Build configuration list for PBXNativeTarget "SurveyApp" */;
+			buildPhases = (
+				A13FB0931BA8516500BD5E1D /* Sources */,
+				A13FB0941BA8516500BD5E1D /* Frameworks */,
+				A13FB0951BA8516500BD5E1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SurveyApp;
+			productName = SurveyApp;
+			productReference = A13FB0971BA8516500BD5E1D /* SurveyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A13FB0AF1BA8516500BD5E1D /* SurveyAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A13FB0BD1BA8516500BD5E1D /* Build configuration list for PBXNativeTarget "SurveyAppTests" */;
+			buildPhases = (
+				A13FB0AC1BA8516500BD5E1D /* Sources */,
+				A13FB0AD1BA8516500BD5E1D /* Frameworks */,
+				A13FB0AE1BA8516500BD5E1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A13FB0B21BA8516500BD5E1D /* PBXTargetDependency */,
+			);
+			name = SurveyAppTests;
+			productName = SurveyAppTests;
+			productReference = A13FB0B01BA8516500BD5E1D /* SurveyAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A13FB08F1BA8516500BD5E1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Fran;
+				TargetAttributes = {
+					A13FB0961BA8516500BD5E1D = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					A13FB0AF1BA8516500BD5E1D = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = A13FB0961BA8516500BD5E1D;
+					};
+				};
+			};
+			buildConfigurationList = A13FB0921BA8516500BD5E1D /* Build configuration list for PBXProject "SurveyApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A13FB08E1BA8516500BD5E1D;
+			productRefGroup = A13FB0981BA8516500BD5E1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A13FB0961BA8516500BD5E1D /* SurveyApp */,
+				A13FB0AF1BA8516500BD5E1D /* SurveyAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A13FB0951BA8516500BD5E1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A13FB0A61BA8516500BD5E1D /* Main.storyboard in Resources */,
+				A13FB0AB1BA8516500BD5E1D /* LaunchScreen.xib in Resources */,
+				A13FB0A81BA8516500BD5E1D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A13FB0AE1BA8516500BD5E1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A13FB0931BA8516500BD5E1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A13FB0A31BA8516500BD5E1D /* AnswersViewController.m in Sources */,
+				A13FB0C51BA8526100BD5E1D /* QuestionsViewController.m in Sources */,
+				A13FB0A01BA8516500BD5E1D /* AppDelegate.m in Sources */,
+				A13FB0C21BA851C200BD5E1D /* SurveyDataSource.m in Sources */,
+				A13FB09D1BA8516500BD5E1D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A13FB0AC1BA8516500BD5E1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A13FB0B71BA8516500BD5E1D /* SurveyAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A13FB0B21BA8516500BD5E1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A13FB0961BA8516500BD5E1D /* SurveyApp */;
+			targetProxy = A13FB0B11BA8516500BD5E1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A13FB0A41BA8516500BD5E1D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A13FB0A51BA8516500BD5E1D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A13FB0A91BA8516500BD5E1D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A13FB0AA1BA8516500BD5E1D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A13FB0B81BA8516500BD5E1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A13FB0B91BA8516500BD5E1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A13FB0BB1BA8516500BD5E1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SurveyApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A13FB0BC1BA8516500BD5E1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SurveyApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A13FB0BE1BA8516500BD5E1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SurveyAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SurveyApp.app/SurveyApp";
+			};
+			name = Debug;
+		};
+		A13FB0BF1BA8516500BD5E1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SurveyAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SurveyApp.app/SurveyApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A13FB0921BA8516500BD5E1D /* Build configuration list for PBXProject "SurveyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A13FB0B81BA8516500BD5E1D /* Debug */,
+				A13FB0B91BA8516500BD5E1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A13FB0BA1BA8516500BD5E1D /* Build configuration list for PBXNativeTarget "SurveyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A13FB0BB1BA8516500BD5E1D /* Debug */,
+				A13FB0BC1BA8516500BD5E1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A13FB0BD1BA8516500BD5E1D /* Build configuration list for PBXNativeTarget "SurveyAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A13FB0BE1BA8516500BD5E1D /* Debug */,
+				A13FB0BF1BA8516500BD5E1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A13FB08F1BA8516500BD5E1D /* Project object */;
+}
