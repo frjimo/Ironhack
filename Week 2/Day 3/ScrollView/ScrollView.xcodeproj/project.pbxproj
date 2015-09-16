@@ -14,6 +14,7 @@
 		A176162F1BA97108001DF54D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A176162E1BA97108001DF54D /* Images.xcassets */; };
 		A17616321BA97108001DF54D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A17616301BA97108001DF54D /* LaunchScreen.xib */; };
 		A176163E1BA97108001DF54D /* ScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A176163D1BA97108001DF54D /* ScrollViewTests.m */; };
+		A17616491BA97328001DF54D /* MyScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17616481BA97328001DF54D /* MyScrollViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		A17616371BA97108001DF54D /* ScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A176163C1BA97108001DF54D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A176163D1BA97108001DF54D /* ScrollViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewTests.m; sourceTree = "<group>"; };
+		A17616471BA97328001DF54D /* MyScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScrollViewController.h; sourceTree = "<group>"; };
+		A17616481BA97328001DF54D /* MyScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScrollViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +86,7 @@
 			children = (
 				A17616251BA97108001DF54D /* AppDelegate.h */,
 				A17616261BA97108001DF54D /* AppDelegate.m */,
-				A17616281BA97108001DF54D /* ViewController.h */,
-				A17616291BA97108001DF54D /* ViewController.m */,
+				A176164A1BA97332001DF54D /* Controller */,
 				A176162B1BA97108001DF54D /* Main.storyboard */,
 				A176162E1BA97108001DF54D /* Images.xcassets */,
 				A17616301BA97108001DF54D /* LaunchScreen.xib */,
@@ -117,6 +119,17 @@
 				A176163C1BA97108001DF54D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A176164A1BA97332001DF54D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A17616281BA97108001DF54D /* ViewController.h */,
+				A17616291BA97108001DF54D /* ViewController.m */,
+				A17616471BA97328001DF54D /* MyScrollViewController.h */,
+				A17616481BA97328001DF54D /* MyScrollViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +235,7 @@
 				A176162A1BA97108001DF54D /* ViewController.m in Sources */,
 				A17616271BA97108001DF54D /* AppDelegate.m in Sources */,
 				A17616241BA97108001DF54D /* main.m in Sources */,
+				A17616491BA97328001DF54D /* MyScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
