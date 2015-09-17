@@ -165,7 +165,7 @@ static NSUInteger const padding = 16;
 
 - (void)questionViewSwitch:(UISwitch *)questionSwitch label:(UILabel *)questionLabel height:(NSUInteger)height {
     UIView *questionView = [[UIView alloc]initWithFrame:CGRectMake(padding, height, self.view.frame.size.width - 2 * padding, 40)];
-    questionSwitch = [[UISwitch alloc]initWithFrame:CGRectZero];
+    //questionSwitch = [[UISwitch alloc]initWithFrame:CGRectZero];
     [questionView addSubview:questionSwitch];
     
     CGFloat x = questionSwitch.frame.origin.x + questionSwitch.frame.size.width + padding;
@@ -201,6 +201,27 @@ static NSUInteger const padding = 16;
     }
     
     return _question3Label;
+}
+
+- (UISwitch *)question1Switch {
+    if(!_question1Switch){
+        _question1Switch = [UISwitch new];
+    }
+    return _question1Switch;
+}
+
+- (UISwitch *)question2Switch {
+    if(!_question2Switch){
+        _question2Switch = [UISwitch new];
+    }
+    return _question2Switch;
+}
+
+- (UISwitch *)question3Switch {
+    if(!_question3Switch){
+        _question3Switch = [UISwitch new];
+    }
+    return _question3Switch;
 }
 
 
