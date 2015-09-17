@@ -7,6 +7,7 @@
 //
 
 #import "QuestionsViewController.h"
+#import "NotificationsKeys.h"
 
 static NSUInteger const padding = 16;
 
@@ -20,16 +21,78 @@ static NSUInteger const padding = 16;
 @property (strong, nonatomic) UILabel *question2Label;
 @property (strong, nonatomic) UILabel *question3Label;
 
+@property (strong, nonatomic) SurveyDataSource *datasource;
+
+@property (strong, nonatomic) UIButton *nextButton;
+
+
 @end
 
 @implementation QuestionsViewController
+
+
+- (instancetype)initWithDataSource:(SurveyDataSource *)datasource {
+    self = [super init];
+    if(self){
+        _datasource = datasource;
+    }
+
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self buildQuestion];
+    [self addSwitchesTargetAction];
+    [self drawButtonIfNeeded];
     
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self fetchQuestionData];
+}
+
+//- (void)addSwitchesTargetAction {
+//    [self.question1Switch addTarget:self action:@selector(didMarkAnswer:) forControlEvents:UIControlEventValueChanged];
+//    [self.question2Switch addTarget:self action:@selector(didMarkAnswer:) forControlEvents:UIControlEventValueChanged];
+//    [self.question3Switch addTarget:self action:@selector(didMarkAnswer:) forControlEvents:UIControlEventValueChanged];
+//}
+//
+//- (void)didMarkAnswer:(UISwitch *)questionSwitch {
+//    NSUInteger questionNumber  = 0;
+//    
+//    if (questionSwitch == self.question2Switch){
+//        questionNumber = 1;
+//    }else if (questionSwitch == self.question3Switch){
+//        questionNumber = 2;
+//    }
+//    
+//    //[[NSNotificationCenter defaultCenter] postNotificationName:@"didAnswer" object:self userInfo:@{@"question":@(questionNumber)}];
+//    
+//    [[NSNotificationCenter defaultCenter] postNotificationName:didAnswerNotification object:self userInfo:@{questionKey:@(questionNumber)}];
+//    
+//    
+//}
+
+- (void)addSwitchesTargetAction {
+    [self.question1Switch addTarget:self action:@selector(didMarkAnswer:) forControlEvents:UIControlEventValueChanged];
+    [self.question2Switch addTarget:self action:@selector(didMarkAnswer:) forControlEvents:UIControlEventValueChanged];
+    [self.question3Switch addTarget:self action:@selector(didMarkAnswer:) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)didMarkAnswer:(UISwitch *)questionSwitch {
+    NSUInteger questionNumber = 0;
+    
+    if (questionSwitch == self.question2Switch) {
+        questionNumber = 1;
+    } else if (questionSwitch == self.question3Switch) {
+        questionNumber = 2;
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:didAnswerNotification object:self userInfo:@{questionKey:@(questionNumber)}];
 }
 
 
@@ -40,59 +103,65 @@ static NSUInteger const padding = 16;
 }
 
 - (void)buildQuestion {
-    [self questionViewSwitch:self.question1Switch label:self.question1Label height:200];
-    [self questionViewSwitch:self.question2Switch label:self.question2Label height:300];
-    [self questionViewSwitch:self.question3Switch label:self.question3Label height:400];
-//    [self questionView1];
-//    [self questionView2];
-//    [self questionView3];
+    [self questionViewSwitch:self.question1Switch label:self.question1Label height:100];
+    [self questionViewSwitch:self.question2Switch label:self.question2Label height:200];
+    [self questionViewSwitch:self.question3Switch label:self.question3Label height:300];
+}
+
+- (void)drawButton {
+    self.nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    //self.nextButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.nextButton setTitle:@"Next" forState:UIControlStateNormal];
+    self.nextButton.backgroundColor = [UIColor redColor];
+    
+    self.nextButton.frame = CGRectMake(padding , 400, 200, 40);
+    
+    [self.nextButton addTarget:self action:@selector(showNextQuestion) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.nextButton];
+}
+
+- (void)drawButtonIfNeeded {
+    if ([self canShowNextController]) {
+        self.nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.nextButton setTitle:@"Siguiente" forState:UIControlStateNormal];
+        self.nextButton.backgroundColor = [UIColor redColor];
+        self.nextButton.frame = CGRectMake(padding, 400, 200, 40);
+        [self.nextButton addTarget:self action:@selector(showNextQuestion) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:self.nextButton];
+    }
+}
+
+- (BOOL)canShowNextController {
+    NSUInteger questionNumber = [self.navigationController.viewControllers indexOfObject:self];
+    NSUInteger numberOfQuestions = [[self.datasource fetchSurvey][@"preguntas"] count];
+    
+    return questionNumber + 1 < numberOfQuestions;
+}
+
+- (void)showNextQuestion {
+    QuestionsViewController *nextQuestion = [[QuestionsViewController alloc] initWithDataSource:self.datasource];
+    [self.navigationController pushViewController:nextQuestion animated:YES];
+}
+
+- (void) fetchQuestionData {
+    //viewController count
+    NSUInteger questionNumber = [self.navigationController.viewControllers indexOfObject:self];
+    
+    NSDictionary *questions = [self.datasource fetchSurvey];
+    NSArray *questionsArray = questions[@"preguntas"];
+    NSDictionary *currentQuestion = [questionsArray objectAtIndex:questionNumber];
+    [self drawQuestionWithDictionary:currentQuestion];
     
 }
 
-//- (void)questionView1 {
-//    UIView *questionView1 = [[UIView alloc]initWithFrame:CGRectMake(padding, 200, self.view.frame.size.width - 2 * padding, 40)];
-//    self.question1Switch = [[UISwitch alloc]initWithFrame:CGRectZero];
-//    [questionView1 addSubview:self.question1Switch];
-//    
-//    CGFloat x = self.question1Switch.frame.origin.x + self.question1Switch.frame.size.width + padding;
-//    CGFloat witdh = questionView1.frame.size.width - self.question1Switch.frame.size.width - padding;
-//    CGFloat height = self.question1Switch.frame.size.height;
-//    self.question1Label = [[UILabel alloc] initWithFrame:CGRectMake(x, 0, witdh, height)];
-//    self.question1Label.text = @"Pregunta1";
-//    [questionView1 addSubview:self.question1Label];
-//    
-//    [self.view addSubview:questionView1];
-//}
-//
-//- (void)questionView2 {
-//    UIView *questionView2 = [[UIView alloc]initWithFrame:CGRectMake(padding, 300, self.view.frame.size.width - 2 * padding, 40)];
-//    self.question2Switch = [[UISwitch alloc]initWithFrame:CGRectZero];
-//    [questionView2 addSubview:self.question2Switch];
-//    
-//    CGFloat x = self.question2Switch.frame.origin.x + self.question2Switch.frame.size.width + padding;
-//    CGFloat witdh = questionView2.frame.size.width - self.question2Switch.frame.size.width - padding;
-//    CGFloat height = self.question2Switch.frame.size.height;
-//    self.question2Label = [[UILabel alloc] initWithFrame:CGRectMake(x, 0, witdh, height)];
-//    self.question2Label.text = @"Pregunta2";
-//    [questionView2 addSubview:self.question2Label];
-//    
-//    [self.view addSubview:questionView2];
-//}
-//
-//- (void)questionView3 {
-//    UIView *questionView3 = [[UIView alloc]initWithFrame:CGRectMake(padding, 400, self.view.frame.size.width - 2 * padding, 40)];
-//    self.question3Switch = [[UISwitch alloc]initWithFrame:CGRectZero];
-//    [questionView3 addSubview:self.question3Switch];
-//    
-//    CGFloat x = self.question3Switch.frame.origin.x + self.question3Switch.frame.size.width + padding;
-//    CGFloat witdh = questionView3.frame.size.width - self.question3Switch.frame.size.width - padding;
-//    CGFloat height = self.question1Switch.frame.size.height;
-//    self.question3Label = [[UILabel alloc] initWithFrame:CGRectMake(x, 0, witdh, height)];
-//    self.question3Label.text = @"Pregunta3";
-//    [questionView3 addSubview:self.question3Label];
-//    
-//    [self.view addSubview:questionView3];
-//}
+- (void)drawQuestionWithDictionary:(NSDictionary *)questionDictionary {
+    self.navigationItem.title = questionDictionary[@"pregunta"];
+    NSArray *answer = questionDictionary[@"respuestas"];
+    self.question1Label.text = answer[0];
+    self.question2Label.text = answer[1];
+    self.question3Label.text = answer[2];
+    
+}
 
 - (void)questionViewSwitch:(UISwitch *)questionSwitch label:(UILabel *)questionLabel height:(NSUInteger)height {
     UIView *questionView = [[UIView alloc]initWithFrame:CGRectMake(padding, height, self.view.frame.size.width - 2 * padding, 40)];
@@ -102,12 +171,38 @@ static NSUInteger const padding = 16;
     CGFloat x = questionSwitch.frame.origin.x + questionSwitch.frame.size.width + padding;
     CGFloat witdh = questionView.frame.size.width - questionSwitch.frame.size.width - padding;
     CGFloat heightAux = questionSwitch.frame.size.height;
-    questionLabel = [[UILabel alloc] initWithFrame:CGRectMake(x, 0, witdh, heightAux)];
+    questionLabel.frame = CGRectMake(x, 0, witdh, heightAux);
     questionLabel.text = @"Pregunta";
     [questionView addSubview:questionLabel];
     
     [self.view addSubview:questionView];
 }
+
+
+- (UILabel *)question1Label {
+    if (!_question1Label) {
+        _question1Label = [UILabel new];
+    }
+    
+    return _question1Label;
+}
+
+- (UILabel *)question2Label {
+    if (!_question2Label) {
+        _question2Label = [UILabel new];
+    }
+    
+    return _question2Label;
+}
+
+- (UILabel *)question3Label {
+    if (!_question3Label) {
+        _question3Label = [UILabel new];
+    }
+    
+    return _question3Label;
+}
+
 
 
 
