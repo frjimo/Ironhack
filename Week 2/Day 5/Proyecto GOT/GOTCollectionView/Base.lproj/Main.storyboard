@@ -50,12 +50,14 @@
                                 <segment title="Vertical"/>
                                 <segment title="Horizontal"/>
                             </segments>
+                            <connections>
+                                <action selector="changeSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="ae1-uo-w5X"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Xbg-wk-fmg" id="1QG-TA-aby"/>
                         <outlet property="gotModel" destination="MW0-lY-FM3" id="p2A-KY-5Ms"/>
-                        <outlet property="layoutViewController" destination="SSZ-zH-AoT" id="32P-se-yWi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

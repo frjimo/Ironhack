@@ -19,8 +19,8 @@
 @property (strong, nonatomic) IBOutlet GotModel *gotModel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) CustomCollectionViewCell *customCell;
-@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *layoutViewController;
-@property (weak, nonatomic) UICollectionViewFlowLayout *horizontalLayout;
+@property (strong, nonatomic) UICollectionViewFlowLayout *verticalLayout;
+@property (strong, nonatomic) UICollectionViewFlowLayout *horizontalLayout;
 
 @end
 
@@ -30,20 +30,28 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
     [self loadModel];
     [self registerNib];
-    
-    self.layoutViewController.headerReferenceSize = CGSizeMake(100,100);
-    //self.horizontalLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
+    self.collectionView.collectionViewLayout = self.verticalLayout;
+
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark IBActions
+
+- (IBAction)changeSegmentedControl:(UISegmentedControl *)segmentedControl {
+    if (segmentedControl.selectedSegmentIndex == 0) {
+        [self.collectionView setCollectionViewLayout:self.verticalLayout animated:YES];
+    }
+    else{
+        [self.collectionView setCollectionViewLayout:self.horizontalLayout animated:YES];
+    }
 }
 
 #pragma mark My methods
+
+
 
 - (void)loadModel {
     [self.gotModel loadModel];
@@ -52,16 +60,6 @@
 - (void)registerNib {
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CustomCollectionViewCell class]) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"collectionCell"];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([HeaderCollectionView class]) bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerCell"];
-}
-
-- (UICollectionViewFlowLayout *)horizontalLayout{
-    if (!_horizontalLayout){
-        _horizontalLayout = [[UICollectionViewFlowLayout alloc]init];
-        _horizontalLayout.itemSize  = CGSizeMake(200, 200);
-        _horizontalLayout.sectionInset;
-    }
-    
-    return _horizontalLayout;
 }
 
 
@@ -89,12 +87,36 @@
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     HeaderCollectionView *cell = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerCell" forIndexPath:indexPath];
-                                  
-                                  
+    
     House *casa = [self.gotModel.houses objectAtIndex:indexPath.section];
     cell.houseLabel.text = casa.name;
     
     return cell;
+}
+
+- (UICollectionViewFlowLayout *)horizontalLayout{
+    if (!_horizontalLayout){
+        _horizontalLayout = [[UICollectionViewFlowLayout alloc]init];
+        _horizontalLayout.itemSize  = CGSizeMake(200, 300);
+        _horizontalLayout.headerReferenceSize = CGSizeMake(200,100);
+        _horizontalLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
+        _horizontalLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    }
+    
+    return _horizontalLayout;
+}
+
+- (UICollectionViewFlowLayout *)verticalLayout {
+    if (!_verticalLayout) {
+        _verticalLayout = [[UICollectionViewFlowLayout alloc]init];
+        _verticalLayout.itemSize  = CGSizeMake(150, 150);
+        _verticalLayout.headerReferenceSize = CGSizeMake(100,100);
+        _verticalLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
+        _verticalLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+
+    }
+
+    return _verticalLayout;
 }
 
 @end
