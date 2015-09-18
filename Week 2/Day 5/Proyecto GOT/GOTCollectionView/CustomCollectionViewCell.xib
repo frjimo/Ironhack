@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="gTV-IL-0wX" customClass="CustomCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5An-Ng-COK">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="5An-Ng-COK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3uu-VR-bkh"/>
+                <constraint firstItem="5An-Ng-COK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Bau-I1-gLR"/>
+                <constraint firstAttribute="bottom" secondItem="5An-Ng-COK" secondAttribute="bottom" id="LLM-aA-0wB"/>
+                <constraint firstItem="5An-Ng-COK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cKj-K1-vyR"/>
+                <constraint firstAttribute="trailing" secondItem="5An-Ng-COK" secondAttribute="trailing" id="kEN-KC-e0a"/>
+                <constraint firstAttribute="trailing" secondItem="5An-Ng-COK" secondAttribute="trailing" id="lbp-t9-hea"/>
+                <constraint firstAttribute="trailing" secondItem="5An-Ng-COK" secondAttribute="trailing" id="mCo-O0-DRx"/>
+                <constraint firstAttribute="bottom" secondItem="5An-Ng-COK" secondAttribute="bottom" id="obj-t0-sqX"/>
+                <constraint firstItem="5An-Ng-COK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ouW-dh-wzF"/>
+                <constraint firstItem="5An-Ng-COK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="t57-r1-Yti"/>
+                <constraint firstItem="5An-Ng-COK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="veW-jV-kpy"/>
+                <constraint firstAttribute="bottom" secondItem="5An-Ng-COK" secondAttribute="bottom" id="xg9-ud-Wbz"/>
+            </constraints>
+            <size key="customSize" width="150" height="150"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="LLM-aA-0wB"/>
+                    <exclude reference="cKj-K1-vyR"/>
+                    <exclude reference="kEN-KC-e0a"/>
+                    <exclude reference="lbp-t9-hea"/>
+                    <exclude reference="obj-t0-sqX"/>
+                    <exclude reference="ouW-dh-wzF"/>
+                    <exclude reference="t57-r1-Yti"/>
+                    <exclude reference="veW-jV-kpy"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="imageCollectionCell" destination="5An-Ng-COK" id="MiT-G2-Cdw"/>
+            </connections>
+            <point key="canvasLocation" x="483" y="357"/>
+        </collectionViewCell>
+    </objects>
+</document>
