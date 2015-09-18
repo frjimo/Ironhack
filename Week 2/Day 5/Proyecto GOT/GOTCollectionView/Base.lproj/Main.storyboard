@@ -49,11 +49,18 @@
                             <segments>
                                 <segment title="Vertical"/>
                                 <segment title="Horizontal"/>
+                                <segment title="ZoomIn"/>
+                                <segment title="CoverFlow"/>
                             </segments>
                             <connections>
                                 <action selector="changeSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="ae1-uo-w5X"/>
                             </connections>
                         </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="qAx-wo-A0M">
+                            <connections>
+                                <action selector="trashButtonPressed:" destination="BYZ-38-t0r" id="qdW-ED-EsH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Xbg-wk-fmg" id="1QG-TA-aby"/>

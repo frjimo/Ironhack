@@ -12,6 +12,8 @@
 #import "Character.h"
 #import "House.h"
 #import "HeaderCollectionView.h"
+#import "ZoomInLayout.h"
+#import "CoverFlowLayout.h"
 
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
@@ -21,6 +23,9 @@
 @property (strong, nonatomic) CustomCollectionViewCell *customCell;
 @property (strong, nonatomic) UICollectionViewFlowLayout *verticalLayout;
 @property (strong, nonatomic) UICollectionViewFlowLayout *horizontalLayout;
+@property (strong, nonatomic) NSMutableSet *selectedItems;
+@property (strong, nonatomic) ZoomInLayout *zoomInLayout;
+@property (strong, nonatomic) CoverFlowLayout *coverLayout;
 
 @end
 
@@ -29,24 +34,49 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
 	// Do any additional setup after loading the view, typically from a nib.
     
     [self loadModel];
     [self registerNib];
     self.collectionView.collectionViewLayout = self.verticalLayout;
+    self.collectionView.allowsMultipleSelection = YES;
+    self.selectedItems = [[NSMutableSet alloc]init];
+    self.zoomInLayout = [[ZoomInLayout alloc]init];
+    self.coverLayout = [[CoverFlowLayout alloc]init];
 
 }
 
 
 #pragma mark IBActions
 
+- (IBAction)trashButtonPressed:(UIBarButtonItem *)sender {
+    [self.collectionView performBatchUpdates:^{
+        [self.collectionView deleteItemsAtIndexPaths:[self.selectedItems allObjects]];
+        [self.gotModel removeCharacters:self.selectedItems];
+        //self.selectedItems = nil;
+        [self.selectedItems removeAllObjects];
+    } completion:nil];
+}
+
 - (IBAction)changeSegmentedControl:(UISegmentedControl *)segmentedControl {
-    if (segmentedControl.selectedSegmentIndex == 0) {
-        [self.collectionView setCollectionViewLayout:self.verticalLayout animated:YES];
+    switch (segmentedControl.selectedSegmentIndex) {
+        case 0:
+            [self.collectionView setCollectionViewLayout:self.verticalLayout animated:YES];
+            break;
+        case 1:
+            [self.collectionView setCollectionViewLayout:self.horizontalLayout animated:YES];
+            break;
+        case 2:
+            [self.collectionView setCollectionViewLayout:self.zoomInLayout animated:YES];
+            break;
+        case 3:
+            [self.collectionView setCollectionViewLayout:self.coverLayout animated:YES];
+            break;
+        default:
+            break;
     }
-    else{
-        [self.collectionView setCollectionViewLayout:self.horizontalLayout animated:YES];
-    }
+    
 }
 
 #pragma mark My methods
@@ -94,6 +124,31 @@
     return cell;
 }
 
+
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath  {
+    CustomCollectionViewCell *cell = (CustomCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    cell.backgroundColor = [UIColor grayColor];
+    [self.selectedItems addObject:indexPath];
+//    CAGradientLayer *gradient = [CAGradientLayer layer];
+//    gradient.frame = cell.bounds;
+//    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:160/255.f green:208/255.f blue:222/255.f alpha:1] CGColor], (id)[[UIColor whiteColor] CGColor], nil];
+//    [cell.layer insertSublayer:gradient atIndex:0];
+
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+    CustomCollectionViewCell *cell = (CustomCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    cell.backgroundColor = [UIColor blackColor];
+    [self.selectedItems removeObject:indexPath];
+}
+
+
+
+
+#pragma mark lazy load
+
 - (UICollectionViewFlowLayout *)horizontalLayout{
     if (!_horizontalLayout){
         _horizontalLayout = [[UICollectionViewFlowLayout alloc]init];
@@ -118,5 +173,7 @@
 
     return _verticalLayout;
 }
+
+
 
 @end

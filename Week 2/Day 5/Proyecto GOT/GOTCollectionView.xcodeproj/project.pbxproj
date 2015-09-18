@@ -63,6 +63,8 @@
 		A1639A081BAC02A900F3D548 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1639A061BAC02A900F3D548 /* CustomCollectionViewCell.xib */; };
 		A1639A0C1BAC18C900F3D548 /* HeaderCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1639A0A1BAC18C900F3D548 /* HeaderCollectionView.m */; };
 		A1639A0D1BAC18C900F3D548 /* HeaderCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1639A0B1BAC18C900F3D548 /* HeaderCollectionView.xib */; };
+		A1639A101BAC498F00F3D548 /* ZoomInLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A1639A0F1BAC498F00F3D548 /* ZoomInLayout.m */; };
+		A1639A131BAC64A100F3D548 /* CoverFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A1639A121BAC64A100F3D548 /* CoverFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,10 @@
 		A1639A091BAC18C900F3D548 /* HeaderCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionView.h; sourceTree = "<group>"; };
 		A1639A0A1BAC18C900F3D548 /* HeaderCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionView.m; sourceTree = "<group>"; };
 		A1639A0B1BAC18C900F3D548 /* HeaderCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderCollectionView.xib; sourceTree = "<group>"; };
+		A1639A0E1BAC498F00F3D548 /* ZoomInLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomInLayout.h; sourceTree = "<group>"; };
+		A1639A0F1BAC498F00F3D548 /* ZoomInLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomInLayout.m; sourceTree = "<group>"; };
+		A1639A111BAC64A100F3D548 /* CoverFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverFlowLayout.h; sourceTree = "<group>"; };
+		A1639A121BAC64A100F3D548 /* CoverFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +220,10 @@
 				A1639A091BAC18C900F3D548 /* HeaderCollectionView.h */,
 				A1639A0A1BAC18C900F3D548 /* HeaderCollectionView.m */,
 				A1639A0B1BAC18C900F3D548 /* HeaderCollectionView.xib */,
+				A1639A0E1BAC498F00F3D548 /* ZoomInLayout.h */,
+				A1639A0F1BAC498F00F3D548 /* ZoomInLayout.m */,
+				A1639A111BAC64A100F3D548 /* CoverFlowLayout.h */,
+				A1639A121BAC64A100F3D548 /* CoverFlowLayout.m */,
 				8CC95699194A3F3900BDD121 /* Images.xcassets */,
 				8CC95688194A3F3900BDD121 /* Supporting Files */,
 			);
@@ -447,6 +457,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1639A101BAC498F00F3D548 /* ZoomInLayout.m in Sources */,
+				A1639A131BAC64A100F3D548 /* CoverFlowLayout.m in Sources */,
 				8CC95698194A3F3900BDD121 /* ViewController.m in Sources */,
 				8CC95706194A3F9600BDD121 /* GotModel.m in Sources */,
 				8CC95705194A3F9600BDD121 /* House.m in Sources */,
