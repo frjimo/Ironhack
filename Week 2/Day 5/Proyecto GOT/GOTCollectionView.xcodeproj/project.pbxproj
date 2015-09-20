@@ -65,6 +65,7 @@
 		A1639A0D1BAC18C900F3D548 /* HeaderCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1639A0B1BAC18C900F3D548 /* HeaderCollectionView.xib */; };
 		A1639A101BAC498F00F3D548 /* ZoomInLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A1639A0F1BAC498F00F3D548 /* ZoomInLayout.m */; };
 		A1639A131BAC64A100F3D548 /* CoverFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A1639A121BAC64A100F3D548 /* CoverFlowLayout.m */; };
+		A16F52821BAF4CF80087AAFA /* CustomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A16F52811BAF4CF80087AAFA /* CustomLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,8 @@
 		A1639A0F1BAC498F00F3D548 /* ZoomInLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomInLayout.m; sourceTree = "<group>"; };
 		A1639A111BAC64A100F3D548 /* CoverFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverFlowLayout.h; sourceTree = "<group>"; };
 		A1639A121BAC64A100F3D548 /* CoverFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverFlowLayout.m; sourceTree = "<group>"; };
+		A16F52801BAF4CF80087AAFA /* CustomLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayout.h; sourceTree = "<group>"; };
+		A16F52811BAF4CF80087AAFA /* CustomLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +227,8 @@
 				A1639A0F1BAC498F00F3D548 /* ZoomInLayout.m */,
 				A1639A111BAC64A100F3D548 /* CoverFlowLayout.h */,
 				A1639A121BAC64A100F3D548 /* CoverFlowLayout.m */,
+				A16F52801BAF4CF80087AAFA /* CustomLayout.h */,
+				A16F52811BAF4CF80087AAFA /* CustomLayout.m */,
 				8CC95699194A3F3900BDD121 /* Images.xcassets */,
 				8CC95688194A3F3900BDD121 /* Supporting Files */,
 			);
@@ -460,6 +465,7 @@
 				A1639A101BAC498F00F3D548 /* ZoomInLayout.m in Sources */,
 				A1639A131BAC64A100F3D548 /* CoverFlowLayout.m in Sources */,
 				8CC95698194A3F3900BDD121 /* ViewController.m in Sources */,
+				A16F52821BAF4CF80087AAFA /* CustomLayout.m in Sources */,
 				8CC95706194A3F9600BDD121 /* GotModel.m in Sources */,
 				8CC95705194A3F9600BDD121 /* House.m in Sources */,
 				A1639A0C1BAC18C900F3D548 /* HeaderCollectionView.m in Sources */,

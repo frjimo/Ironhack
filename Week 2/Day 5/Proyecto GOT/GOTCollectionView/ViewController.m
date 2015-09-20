@@ -14,6 +14,7 @@
 #import "HeaderCollectionView.h"
 #import "ZoomInLayout.h"
 #import "CoverFlowLayout.h"
+#import "CustomLayout.h"
 
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
@@ -26,6 +27,7 @@
 @property (strong, nonatomic) NSMutableSet *selectedItems;
 @property (strong, nonatomic) ZoomInLayout *zoomInLayout;
 @property (strong, nonatomic) CoverFlowLayout *coverLayout;
+@property (strong, nonatomic) CustomLayout *customLayout;
 
 @end
 
@@ -44,7 +46,8 @@
     self.selectedItems = [[NSMutableSet alloc]init];
     self.zoomInLayout = [[ZoomInLayout alloc]init];
     self.coverLayout = [[CoverFlowLayout alloc]init];
-
+    self.customLayout = [[CustomLayout alloc]init];
+    
 }
 
 
@@ -73,6 +76,8 @@
         case 3:
             [self.collectionView setCollectionViewLayout:self.coverLayout animated:YES];
             break;
+        case 4:
+            [self.collectionView setCollectionViewLayout:self.customLayout animated:NO];
         default:
             break;
     }
