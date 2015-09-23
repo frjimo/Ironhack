@@ -20,7 +20,8 @@
     [super viewDidLoad];
     
     //[self firstPractice];
-    [self secondPractice];
+    //[self secondPractice];
+    [self thirdPractice];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -69,6 +70,22 @@
     
     
     [self.redView addSubview:abomi];
+}
+
+- (void)thirdPractice {
+    CALayer *layerB = [CALayer layer];
+    layerB.bounds = CGRectMake(0, 0, 100, 100);
+    //layerB.anchorPoint = CGPointMake(0,0);
+    layerB.position = CGPointMake(self.redView.frame.size.width / 2, self.redView.frame.size.height / 2);
+    layerB.backgroundColor = [[UIColor yellowColor]CGColor];
+    
+    UIImage *image = [UIImage imageNamed:@"Abomi"];
+    UIImageView *abomi = [[UIImageView alloc]initWithImage:image];
+    
+    layerB.contents = (id)image.CGImage;
+    [self.redView.layer insertSublayer:layerB atIndex:1];
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
