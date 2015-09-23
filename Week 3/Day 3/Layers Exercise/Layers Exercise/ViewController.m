@@ -34,12 +34,23 @@
     layerC.anchorPoint = CGPointMake(0.7,1);
     layerC.position = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
     layerC.backgroundColor = [[UIColor purpleColor]CGColor];
-    
 
     
     [self.view.layer insertSublayer:layerA atIndex:2];
     [self.view.layer insertSublayer:layerB atIndex:1];
     [self.view.layer insertSublayer:layerC atIndex:0];
+    
+    
+    CALayer *layerD = [CALayer layer];
+    layerD.bounds = CGRectMake(0, 0, 20, 20);
+    //layerD.anchorPoint = CGPointMake(0.7,1);
+    layerD.position = CGPointMake(layerA.frame.size.width / 2, 20);
+    
+    UIImage *image = [UIImage imageNamed:@"Icon"];
+    UIImageView *icon = [[UIImageView alloc]initWithImage:image];
+    
+    layerD.contents = (id)image.CGImage;
+    [layerA insertSublayer:layerD atIndex:1];
     
 }
 @end
