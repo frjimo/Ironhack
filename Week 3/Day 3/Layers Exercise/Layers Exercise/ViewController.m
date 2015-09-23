@@ -16,12 +16,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
+    
+    CALayer *layerA = [CALayer layer];
+    layerA.bounds = CGRectMake(0, 0, 150, 150);
+    //layerA.anchorPoint = CGPointMake(0,0);
+    layerA.position = CGPointMake(self.view.frame.size.width / 2 - 40, self.view.frame.size.height / 2);
+    layerA.backgroundColor = [[UIColor redColor]CGColor];
+    
+    CALayer *layerB= [CALayer layer];
+    layerB.bounds = CGRectMake(0, 0, 100, 200);
+    layerB.anchorPoint = CGPointMake(0.3,0.8);
+    layerB.position = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2 + 10);
+    layerB.backgroundColor = [[UIColor greenColor]CGColor];
+    
+    CALayer *layerC = [CALayer layer];
+    layerC.bounds = CGRectMake(0, 0, 100, 220);
+    layerC.anchorPoint = CGPointMake(0.7,1);
+    layerC.position = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
+    layerC.backgroundColor = [[UIColor purpleColor]CGColor];
+    
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    [self.view.layer insertSublayer:layerA atIndex:2];
+    [self.view.layer insertSublayer:layerB atIndex:1];
+    [self.view.layer insertSublayer:layerC atIndex:0];
+    
 }
-
 @end
