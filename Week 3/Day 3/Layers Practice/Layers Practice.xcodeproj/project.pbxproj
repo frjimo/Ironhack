@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1380BB51BB2CED000AD65D4 /* ScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A1380BB41BB2CED000AD65D4 /* ScrollLayer.m */; };
 		A1CFD2131BB2924A0041F775 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CFD2121BB2924A0041F775 /* main.m */; };
 		A1CFD2161BB2924A0041F775 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CFD2151BB2924A0041F775 /* AppDelegate.m */; };
 		A1CFD2191BB2924A0041F775 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CFD2181BB2924A0041F775 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A1380BB31BB2CED000AD65D4 /* ScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollLayer.h; sourceTree = "<group>"; };
+		A1380BB41BB2CED000AD65D4 /* ScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollLayer.m; sourceTree = "<group>"; };
 		A1CFD20D1BB2924A0041F775 /* Layers Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Layers Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CFD2111BB2924A0041F775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1CFD2121BB2924A0041F775 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				A1CFD2151BB2924A0041F775 /* AppDelegate.m */,
 				A1CFD2171BB2924A0041F775 /* ViewController.h */,
 				A1CFD2181BB2924A0041F775 /* ViewController.m */,
+				A1380BB31BB2CED000AD65D4 /* ScrollLayer.h */,
+				A1380BB41BB2CED000AD65D4 /* ScrollLayer.m */,
 				A1CFD21A1BB2924A0041F775 /* Main.storyboard */,
 				A1CFD21D1BB2924A0041F775 /* Images.xcassets */,
 				A1CFD21F1BB2924A0041F775 /* LaunchScreen.xib */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1380BB51BB2CED000AD65D4 /* ScrollLayer.m in Sources */,
 				A1CFD2191BB2924A0041F775 /* ViewController.m in Sources */,
 				A1CFD2161BB2924A0041F775 /* AppDelegate.m in Sources */,
 				A1CFD2131BB2924A0041F775 /* main.m in Sources */,
@@ -416,6 +422,7 @@
 				A1CFD2321BB2924A0041F775 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1CFD2331BB2924A0041F775 /* Build configuration list for PBXNativeTarget "Layers PracticeTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				A1CFD2351BB2924A0041F775 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

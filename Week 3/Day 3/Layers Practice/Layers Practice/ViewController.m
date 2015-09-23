@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ScrollLayer.h"
 
 @interface ViewController ()
 
@@ -21,9 +22,25 @@
     
     //[self firstPractice];
     //[self secondPractice];
-    [self thirdPractice];
+    //[self thirdPractice];
+    [self fourthPractice];
+    
+    //UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithFrame:CGRectMake(20, 30, 200, 200)];
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    blurEffectView.frame = self.view.bounds;
+    //blurEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:blurEffectView];
+
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+
+
+- (void)fourthPractice {
+    ScrollLayer *scrollLayer = [[ScrollLayer alloc] initWithFrame:CGRectMake(20, 30, 200, 200)];
+    [self.view addSubview:scrollLayer];
 }
 
 - (void)secondPractice {
