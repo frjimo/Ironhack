@@ -14,6 +14,7 @@
 		A10911261BB3E3BF00DA732D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10911251BB3E3BF00DA732D /* Images.xcassets */; };
 		A10911291BB3E3BF00DA732D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10911271BB3E3BF00DA732D /* LaunchScreen.xib */; };
 		A10911351BB3E3BF00DA732D /* Animations_PracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A10911341BB3E3BF00DA732D /* Animations_PracticeTests.m */; };
+		A10911431BB3EEB500DA732D /* ViewPractice 2.m in Sources */ = {isa = PBXBuildFile; fileRef = A10911421BB3EEB500DA732D /* ViewPractice 2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		A109112E1BB3E3BF00DA732D /* Animations PracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Animations PracticeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10911331BB3E3BF00DA732D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A10911341BB3E3BF00DA732D /* Animations_PracticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Animations_PracticeTests.m; sourceTree = "<group>"; };
+		A10911411BB3EEB500DA732D /* ViewPractice 2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewPractice 2.h"; sourceTree = "<group>"; };
+		A10911421BB3EEB500DA732D /* ViewPractice 2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewPractice 2.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				A109111D1BB3E3BF00DA732D /* AppDelegate.m */,
 				A109111F1BB3E3BF00DA732D /* ViewController.h */,
 				A10911201BB3E3BF00DA732D /* ViewController.m */,
+				A10911411BB3EEB500DA732D /* ViewPractice 2.h */,
+				A10911421BB3EEB500DA732D /* ViewPractice 2.m */,
 				A10911221BB3E3BF00DA732D /* Main.storyboard */,
 				A10911251BB3E3BF00DA732D /* Images.xcassets */,
 				A10911271BB3E3BF00DA732D /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				A10911211BB3E3BF00DA732D /* ViewController.m in Sources */,
 				A109111E1BB3E3BF00DA732D /* AppDelegate.m in Sources */,
 				A109111B1BB3E3BF00DA732D /* main.m in Sources */,
+				A10911431BB3EEB500DA732D /* ViewPractice 2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
