@@ -10,13 +10,50 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) UIImageView *tits;
+@property (nonatomic, strong) UIImageView *work;
+
 @end
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //[self exerciseOne];
+    [self exerciseTwo];
+    
+}
+
+
+- (void)exerciseTwo {
+    CAScrollLayer *layer = [CAScrollLayer layer];
+    
+    layer.frame = CGRectMake(0, 0, self.view.frame.size.width * 2 , self.view.frame.size.height);
+    layer.backgroundColor = [UIColor redColor].CGColor;
+    layer.scrollMode = kCAScrollHorizontally;
+    
+    self.tits.image = [UIImage imageNamed:@"tits"];
+    self.work.image = [UIImage imageNamed:@"works"];
+    self.tits.contentMode = UIViewContentModeScaleToFill;
+    self.work.contentMode = UIViewContentModeScaleToFill;
+    
+//    
+//    self.imageView = [[UIImageView alloc]initWithFrame:self.bounds];
+//    self.imageView.image = [UIImage imageNamed:@"Abomi"];
+//    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+//
+    
+    
+    [self.view.layer addSublayer:layer];
+    
+}
+
+
+
+
+- (void)exerciseOne {
     CALayer *layerA = [CALayer layer];
     layerA.bounds = CGRectMake(0, 0, 150, 150);
     //layerA.anchorPoint = CGPointMake(0,0);
@@ -34,7 +71,7 @@
     layerC.anchorPoint = CGPointMake(0.7,1);
     layerC.position = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
     layerC.backgroundColor = [[UIColor purpleColor]CGColor];
-
+    
     
     [self.view.layer insertSublayer:layerA atIndex:2];
     [self.view.layer insertSublayer:layerB atIndex:1];
@@ -42,15 +79,14 @@
     
     
     CALayer *layerD = [CALayer layer];
-    layerD.bounds = CGRectMake(0, 0, 20, 20);
+    UIImage *image = [UIImage imageNamed:@"Icon"];
+    layerD.bounds = CGRectMake(0, 0, image.size.width-15, image.size.height-15);
     //layerD.anchorPoint = CGPointMake(0.7,1);
     layerD.position = CGPointMake(layerA.frame.size.width / 2, 20);
     
-    UIImage *image = [UIImage imageNamed:@"Icon"];
-    UIImageView *icon = [[UIImageView alloc]initWithImage:image];
+    
     
     layerD.contents = (id)image.CGImage;
     [layerA insertSublayer:layerD atIndex:1];
-    
 }
 @end
