@@ -24,8 +24,23 @@
     
     
     
-    UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(handlePinchGesture:)];
-    [self.view addGestureRecognizer:pinchRecognizer];
+//    UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(handlePinchGesture:)];
+//    [self.view addGestureRecognizer:pinchRecognizer];
+    
+
+    UIRotationGestureRecognizer *rotationRecognizer = [[UIRotationGestureRecognizer alloc]initWithTarget:self action:@selector(handleRotationGesture:)];
+    [self.view addGestureRecognizer:rotationRecognizer];
+    
+}
+
+
+-(void)handleRotationGesture:(UIRotationGestureRecognizer *)rotationGestureRecognizer {
+    UIView *imageView = [self imageViewBehindGestureRecognizerIfAny: rotationGestureRecognizer];
+    if(!imageView || rotationGestureRecognizer.state != UIGestureRecognizerStateChanged) {
+        return;
+    }
+    imageView.transform = CGAffineTransformRotate(imageView.transform, rotationGestureRecognizer.rotation);
+    rotationGestureRecognizer.rotation = 0;
 }
 
 
@@ -38,7 +53,7 @@
     pinchGestureRecognizer.scale = 1;
 }
 
-- (UIView *)imageViewBehindGestureRecognizerIfAny:(UIPinchGestureRecognizer *)gestureRecognizer {
+- (UIView *)imageViewBehindGestureRecognizerIfAny:(UIGestureRecognizer *)gestureRecognizer {
     CGPoint point = [gestureRecognizer locationInView:self.view];
     UIView *imageView = [self.view hitTest:point withEvent:nil];
     if(![imageView isKindOfClass: [UIImageView class]]){
