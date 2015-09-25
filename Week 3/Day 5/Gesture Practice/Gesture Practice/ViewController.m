@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -18,29 +18,37 @@
     [super viewDidLoad];
     
 
-    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
-    tapRecognizer.numberOfTapsRequired = 1;
-    [self.view addGestureRecognizer:tapRecognizer];
+    [self initTap];
+    [self initPinch];
+    [self initRotation];
     
     
-    
-//    UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(handlePinchGesture:)];
-//    [self.view addGestureRecognizer:pinchRecognizer];
-    
-
-    UIRotationGestureRecognizer *rotationRecognizer = [[UIRotationGestureRecognizer alloc]initWithTarget:self action:@selector(handleRotationGesture:)];
-    [self.view addGestureRecognizer:rotationRecognizer];
     
 }
 
+- (void)initTap {
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    tapRecognizer.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:tapRecognizer];
+}
 
--(void)handleRotationGesture:(UIRotationGestureRecognizer *)rotationGestureRecognizer {
-    UIView *imageView = [self imageViewBehindGestureRecognizerIfAny: rotationGestureRecognizer];
-    if(!imageView || rotationGestureRecognizer.state != UIGestureRecognizerStateChanged) {
-        return;
-    }
-    imageView.transform = CGAffineTransformRotate(imageView.transform, rotationGestureRecognizer.rotation);
-    rotationGestureRecognizer.rotation = 0;
+- (void)initPinch {
+    UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(handlePinchGesture:)];
+    pinchRecognizer.delegate = self;
+    [self.view addGestureRecognizer:pinchRecognizer];
+}
+
+- (void)initRotation {
+    UIRotationGestureRecognizer *rotationRecognizer = [[UIRotationGestureRecognizer alloc]initWithTarget:self action:@selector(handleRotationGesture:)];
+    rotationRecognizer.delegate = self;
+    [self.view addGestureRecognizer:rotationRecognizer];
+}
+
+
+
+
+- (void)handleTapGesture:(UITapGestureRecognizer *)tapGestureRecognizer {
+    [self createImage:[tapGestureRecognizer locationInView:self.view]];
 }
 
 
@@ -53,6 +61,26 @@
     pinchGestureRecognizer.scale = 1;
 }
 
+-(void)handleRotationGesture:(UIRotationGestureRecognizer *)rotationGestureRecognizer {
+    UIView *imageView = [self imageViewBehindGestureRecognizerIfAny: rotationGestureRecognizer];
+    if(!imageView || rotationGestureRecognizer.state != UIGestureRecognizerStateChanged) {
+        return;
+    }
+    imageView.transform = CGAffineTransformRotate(imageView.transform, rotationGestureRecognizer.rotation);
+    rotationGestureRecognizer.rotation = 0;
+}
+
+
+#pragma mark - UIGesture
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    return YES;
+}
+
+
+
+
+
 - (UIView *)imageViewBehindGestureRecognizerIfAny:(UIGestureRecognizer *)gestureRecognizer {
     CGPoint point = [gestureRecognizer locationInView:self.view];
     UIView *imageView = [self.view hitTest:point withEvent:nil];
@@ -61,19 +89,6 @@
     }
     return (UIImageView *)imageView;
 }
-
-
-- (void)handleTapGesture:(UITapGestureRecognizer *)tapGestureRecognizer {
-    [self createImage:[tapGestureRecognizer locationInView:self.view]];
-}
-
-
-
-
-
-
-
-
 
 
 - (void)createImage:(CGPoint )location {
