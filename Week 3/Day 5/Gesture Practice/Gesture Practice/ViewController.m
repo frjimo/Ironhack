@@ -21,10 +21,12 @@
     [self initTap];
     [self initPinch];
     [self initRotation];
+    [self initPan];
     
-    
+
     
 }
+
 
 - (void)initTap {
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
@@ -43,6 +45,13 @@
     rotationRecognizer.delegate = self;
     [self.view addGestureRecognizer:rotationRecognizer];
 }
+
+- (void)initPan {
+    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+    [self.view addGestureRecognizer:panGestureRecognizer];
+}
+
+
 
 
 
@@ -68,6 +77,17 @@
     }
     imageView.transform = CGAffineTransformRotate(imageView.transform, rotationGestureRecognizer.rotation);
     rotationGestureRecognizer.rotation = 0;
+}
+
+- (void)handlePanGesture:(UIPanGestureRecognizer *)panGestureRecognizer {
+    CGPoint translation = [panGestureRecognizer translationInView:self.view];
+    
+    UIView *imageView = [self imageViewBehindGestureRecognizerIfAny:panGestureRecognizer];
+    if(!imageView || panGestureRecognizer.state != UIGestureRecognizerStateChanged) {
+        return;
+    }
+    imageView.center = CGPointMake(imageView.center.x + translation.x, imageView.center.y + translation.y);
+    [panGestureRecognizer setTranslation:CGPointZero inView:self.view];
 }
 
 
