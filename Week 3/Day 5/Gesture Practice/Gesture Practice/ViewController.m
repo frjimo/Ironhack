@@ -10,6 +10,8 @@
 
 @interface ViewController () <UIGestureRecognizerDelegate>
 
+@property (strong, nonatomic) UIView *currentView;
+
 @end
 
 @implementation ViewController
@@ -48,6 +50,9 @@
 
 - (void)initPan {
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+    panGestureRecognizer.delegate = self;
+    panGestureRecognizer.minimumNumberOfTouches = 1;
+    panGestureRecognizer.maximumNumberOfTouches = 2;
     [self.view addGestureRecognizer:panGestureRecognizer];
 }
 
@@ -62,31 +67,27 @@
 
 
 - (void)handlePinchGesture:(UIPinchGestureRecognizer *)pinchGestureRecognizer {
-    UIView *imageView = [self imageViewBehindGestureRecognizerIfAny:pinchGestureRecognizer];
-    if(!imageView || pinchGestureRecognizer.state != UIGestureRecognizerStateChanged) {
+    if(pinchGestureRecognizer.state != UIGestureRecognizerStateChanged) {
         return;
     }
-    imageView.transform = CGAffineTransformScale(imageView.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
+    self.currentView.transform = CGAffineTransformScale(self.currentView.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
     pinchGestureRecognizer.scale = 1;
 }
 
 -(void)handleRotationGesture:(UIRotationGestureRecognizer *)rotationGestureRecognizer {
-    UIView *imageView = [self imageViewBehindGestureRecognizerIfAny: rotationGestureRecognizer];
-    if(!imageView || rotationGestureRecognizer.state != UIGestureRecognizerStateChanged) {
+    if(rotationGestureRecognizer.state != UIGestureRecognizerStateChanged) {
         return;
     }
-    imageView.transform = CGAffineTransformRotate(imageView.transform, rotationGestureRecognizer.rotation);
+    self.currentView.transform = CGAffineTransformRotate(self.currentView.transform, rotationGestureRecognizer.rotation);
     rotationGestureRecognizer.rotation = 0;
 }
 
 - (void)handlePanGesture:(UIPanGestureRecognizer *)panGestureRecognizer {
     CGPoint translation = [panGestureRecognizer translationInView:self.view];
-    
-    UIView *imageView = [self imageViewBehindGestureRecognizerIfAny:panGestureRecognizer];
-    if(!imageView || panGestureRecognizer.state != UIGestureRecognizerStateChanged) {
+    if(panGestureRecognizer.state != UIGestureRecognizerStateChanged) {
         return;
     }
-    imageView.center = CGPointMake(imageView.center.x + translation.x, imageView.center.y + translation.y);
+    self.currentView.center = CGPointMake(self.currentView.center.x + translation.x, self.currentView.center.y + translation.y);
     [panGestureRecognizer setTranslation:CGPointZero inView:self.view];
 }
 
@@ -95,6 +96,11 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
     return YES;
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    self.currentView = [self imageViewBehindGestureRecognizerIfAny: gestureRecognizer];
+    return self.currentView != nil;
 }
 
 
