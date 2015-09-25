@@ -100,6 +100,10 @@
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
     self.currentView = [self imageViewBehindGestureRecognizerIfAny: gestureRecognizer];
+    //UIImageView *imageView = [self imageViewBehindGestureRecognizerIfAny: gestureRecognizer];
+    
+    [self.view bringSubviewToFront:self.currentView];
+    
     return self.currentView != nil;
 }
 
