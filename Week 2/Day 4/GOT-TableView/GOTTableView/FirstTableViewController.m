@@ -2,7 +2,7 @@
 //  FirstTableViewController.m
 //  GOTTableView
 //
-//  Created by Mateo Mauricio Samaranch on 17/09/15.
+//  Created by Francisco Jimenez Moral on 17/09/15.
 //  Copyright (c) 2015 Ricardo Sanchez. All rights reserved.
 //
 
