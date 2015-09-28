@@ -14,4 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UIImageView *imageBackground;
 
+- (void)setOffset:(float)p;
+
 @end

@@ -25,4 +25,13 @@
     // Configure the view for the selected state
 }
 
+
+- (void)setOffset:(float)p {
+    CGRect imageFrame = self.imageBackground.frame;
+    imageFrame.origin = CGPointMake(0, -p*(self.imageBackground.frame.size.height-self.bounds.size.height));
+    self.imageBackground.frame = imageFrame;
+    self.clipsToBounds = YES;
+}
+
+
 @end

@@ -42,6 +42,7 @@
 }
 - (IBAction)deletePerson:(UIBarButtonItem *)sender {
     [self.delegate didPressKillPersonaje:self.personaje];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
