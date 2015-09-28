@@ -27,10 +27,6 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     documentsDirectory = [paths objectAtIndex:0];
     self.path = [documentsDirectory stringByAppendingPathComponent:@"bookmarks.dat"];
-    
-    
-    //self.bookmarks = [[NSMutableArray alloc] init];
-    //self.bookmarks = [NSKeyedUnarchiver unarchiveObjectWithFile:self.path];
 
 }
 
@@ -79,9 +75,10 @@
 
 - (void)didPressDoneBookmark:(Bookmark *)bookmark{
     NSLog(@"bookmark");
-    
-    [self addBormak:bookmark];
-    [self.tableView reloadData];
+    if (bookmark){
+        [self addBormak:bookmark];
+        [self.tableView reloadData];
+    }
     [self dismissViewControllerAnimated:YES completion:NULL];
     
 }
@@ -104,13 +101,26 @@
     if (!_bookmarks){
         [self loadBookmarks];
     }
-        
-        [self.bookmarks addObject:bookmark];
-        
-        [NSKeyedArchiver archiveRootObject:self.bookmarks toFile:self.path];
     
+    //[bookmark hash];
     
+//    for (int i = 0; i<[self.bookmarks  count]; i++){
+//        if ([[self.bookmarks objectAtIndex:i] isEqual:bookmark]){
+//            return;
+//        }
+//    }
     
+//    if (self.bookmarks indexOfObjectIdenticalTo:bookmark){
+//        return;
+//    }
+    
+    if ([self.bookmarks containsObject:bookmark]){
+        return;
+    }
+    
+    [self.bookmarks addObject:bookmark];
+    
+    [NSKeyedArchiver archiveRootObject:self.bookmarks toFile:self.path];
 }
 
 

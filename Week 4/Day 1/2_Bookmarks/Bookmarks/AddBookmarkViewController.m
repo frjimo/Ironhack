@@ -25,16 +25,21 @@
 
 - (IBAction)addBookmark:(id)sender {
     
-//    NSString *label = self.nameText.text;
-//    
-//    if (label.length != 0){
-//        
-//    }
-    Bookmark *bookmark = [[Bookmark alloc]init];
+    NSString *labelName = self.nameText.text;
+    NSString *labelUrl = self.urlText.text;
+    Bookmark *bookmark;
     
-    bookmark.url = self.urlText.text;
-    bookmark.name = self.nameText.text;
-    [self.delegate didPressDoneBookmark:bookmark];
+    if (labelName.length == 0 || labelUrl.length == 0){
+        [self.delegate didPressDoneBookmark:bookmark];
+        
+    }
+    else{
+        bookmark = [[Bookmark alloc]init];
+        
+        bookmark.url = self.urlText.text;
+        bookmark.name = self.nameText.text;
+        [self.delegate didPressDoneBookmark:bookmark];
+    }
 }
 
 
