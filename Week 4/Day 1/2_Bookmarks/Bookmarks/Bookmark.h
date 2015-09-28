@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Mantle.h>
 
-@interface Bookmark : NSObject <NSCoding>
+@interface Bookmark : MTLModel
 
 @property (nonatomic, copy) NSString *url, *name;
 
