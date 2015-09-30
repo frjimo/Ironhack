@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 typedef void (^ImageBlock) (UIImage *);
+typedef void (^TransformBlock) ();
 
 @interface ViewController ()
 
@@ -26,8 +27,8 @@ typedef void (^ImageBlock) (UIImage *);
 
     self.wallpaperView = [[UIImageView alloc] initWithImage:nil];
     self.wallpaperView.frame = self.view.bounds;
-    //self.wallpaperView.contentMode = UIViewContentModeScaleAspectFit;
-    self.wallpaperView.contentMode = UIViewContentModeCenter;
+    self.wallpaperView.contentMode = UIViewContentModeScaleAspectFit;
+    //self.wallpaperView.contentMode = UIViewContentModeCenter;
     
     [self.view addSubview:self.wallpaperView];
     
@@ -50,10 +51,21 @@ typedef void (^ImageBlock) (UIImage *);
 //    UIImage *image = [UIImage imageNamed:imageName];
 //    self.wallpaperView.image = image;
     
+    [UIView animateWithDuration:0.5 animations:^{
+        self.wallpaperView.alpha = 0;
+    }];
+    
     //Paso 5
     [self fetchImageWithIndex:self.lastWallpaperIndex block:^(UIImage * image) {
         self.wallpaperView.image = image;
+        [UIView animateWithDuration:0.5 animations:^{
+            self.wallpaperView.alpha = 1;
+        }];
     }];
+    
+    [self bounceImage];
+    
+    
     
     
 }
@@ -65,6 +77,8 @@ typedef void (^ImageBlock) (UIImage *);
     
     [self scaleImageWithImage:image witdh:200.0 block:block];
 }
+
+
 
 - (void)scaleImageWithImage:(UIImage *)image witdh:(CGFloat)witdh block:(ImageBlock)block{
     CGFloat height = witdh / image.size.width * image.size.height;
@@ -79,5 +93,41 @@ typedef void (^ImageBlock) (UIImage *);
     block(newImage);
     
 }
+
+- (void)bounceImage {
+//    CGFloat duration = 0.25;
+//    [UIView animateWithDuration:duration animations:^{
+//        self.wallpaperView.transform = CGAffineTransformMakeScale(1.1, 1.1);
+//    } completion:^(BOOL finished) {
+//        [UIView animateWithDuration:duration animations:^{
+//            self.wallpaperView.transform = CGAffineTransformMakeScale(0.9, 0.9);
+//        } completion:^(BOOL finished) {
+//            [UIView animateWithDuration:duration animations:^{
+//            self.wallpaperView.transform = CGAffineTransformMakeScale(1, 1);
+//            }];
+//        }];
+//    }];
+    
+    [self scaleImageTo:1.1 completion:^(void){
+        [self scaleImageTo:0.9 completion:^{
+            [self scaleImageTo:1.0 completion:nil];
+        }];
+    }];
+    
+}
+
+
+- (void)scaleImageTo:(CGFloat)scale completion:(TransformBlock)completion {
+    CGFloat duration = 0.25f;
+    [UIView animateWithDuration:duration animations:^{
+        self.wallpaperView.transform = CGAffineTransformMakeScale(scale, scale);
+    } completion:^(BOOL finished) {
+        if (completion){
+            completion();
+        }
+    }];
+}
+
+
 
 @end
