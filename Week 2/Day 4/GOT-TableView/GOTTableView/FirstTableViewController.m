@@ -133,21 +133,21 @@
 
 - (void)didPressKillPersonaje:(Personaje *)personaje
 {
-    //NSLog(@"DEAD");
-    //[self.navigationController popViewControllerAnimated:YES];
-    [self.gotModel killPersonaje:personaje];
-    [self.tableView reloadData];
+//    //NSLog(@"DEAD");
+//    //[self.navigationController popViewControllerAnimated:YES];
+//    [self.gotModel killPersonaje:personaje];
+//    [self.tableView reloadData];
     
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    for (TableViewCell* cell in self.tableView.visibleCells) {
-        float distancia = cell.frame.origin.y-scrollView.contentOffset.y;
-        //NSLog(@"%.2f %.2f",distancia, self.view.bounds.size.height);
-        [cell setOffset:distancia/self.view.bounds.size.height];
-    }
-}
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//    for (TableViewCell* cell in self.tableView.visibleCells) {
+//        float distancia = cell.frame.origin.y-scrollView.contentOffset.y;
+//        //NSLog(@"%.2f %.2f",distancia, self.view.bounds.size.height);
+//        [cell setOffset:distancia/self.view.bounds.size.height];
+//    }
+//}
 
 
 
