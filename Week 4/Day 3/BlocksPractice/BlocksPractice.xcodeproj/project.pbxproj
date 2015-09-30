@@ -15,6 +15,7 @@
 		A1D408591BBBCA5E00810C04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D408571BBBCA5E00810C04 /* LaunchScreen.storyboard */; };
 		A1D408641BBBCA5E00810C04 /* BlocksPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D408631BBBCA5E00810C04 /* BlocksPracticeTests.m */; };
 		A1D4086F1BBBCA5E00810C04 /* BlocksPracticeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4086E1BBBCA5E00810C04 /* BlocksPracticeUITests.m */; };
+		A1D4087E1BBBDCD700810C04 /* SimpleCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4087D1BBBDCD700810C04 /* SimpleCounter.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		A1D4086A1BBBCA5E00810C04 /* BlocksPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlocksPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D4086E1BBBCA5E00810C04 /* BlocksPracticeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlocksPracticeUITests.m; sourceTree = "<group>"; };
 		A1D408701BBBCA5E00810C04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1D4087C1BBBDCD700810C04 /* SimpleCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCounter.h; sourceTree = "<group>"; };
+		A1D4087D1BBBDCD700810C04 /* SimpleCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCounter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				A1D4084D1BBBCA5E00810C04 /* AppDelegate.m */,
 				A1D4084F1BBBCA5E00810C04 /* ViewController.h */,
 				A1D408501BBBCA5E00810C04 /* ViewController.m */,
+				A1D4087C1BBBDCD700810C04 /* SimpleCounter.h */,
+				A1D4087D1BBBDCD700810C04 /* SimpleCounter.m */,
 				A1D408521BBBCA5E00810C04 /* Main.storyboard */,
 				A1D408551BBBCA5E00810C04 /* Assets.xcassets */,
 				A1D408571BBBCA5E00810C04 /* LaunchScreen.storyboard */,
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D4087E1BBBDCD700810C04 /* SimpleCounter.m in Sources */,
 				A1D408511BBBCA5E00810C04 /* ViewController.m in Sources */,
 				A1D4084E1BBBCA5E00810C04 /* AppDelegate.m in Sources */,
 				A1D4084B1BBBCA5E00810C04 /* main.m in Sources */,
@@ -496,6 +502,7 @@
 				A1D408751BBBCA5E00810C04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1D408761BBBCA5E00810C04 /* Build configuration list for PBXNativeTarget "BlocksPracticeTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +511,7 @@
 				A1D408781BBBCA5E00810C04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1D408791BBBCA5E00810C04 /* Build configuration list for PBXNativeTarget "BlocksPracticeUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +520,7 @@
 				A1D4087B1BBBCA5E00810C04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

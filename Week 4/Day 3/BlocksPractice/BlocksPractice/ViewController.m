@@ -9,6 +9,7 @@
 
 
 #import "ViewController.h"
+#import "SimpleCounter.h"
 
 typedef NSInteger (^FirstBlock) (NSInteger, NSInteger);
 typedef void (^ThirdBlock) (NSInteger, NSInteger);
@@ -27,17 +28,32 @@ typedef void (^ThirdBlock) (NSInteger, NSInteger);
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self firstBlock];
-    [self firstBlockTypeDef];
-    [self secondBlock];
-    [self thirdBlockMethod:^(NSInteger x, NSInteger y) {
-        NSLog(@"Valor x: %d, Valor y: %d\n",x,y);
-    }];
-    [self thirdBlockMethodTypeDef:^(NSInteger x, NSInteger y) {
-        NSLog(@"Valor x2+y2: %d\n",x+y);
+//    [self firstBlock];
+//    [self firstBlockTypeDef];
+//    [self secondBlock];
+//    [self thirdBlockMethod:^(NSInteger x, NSInteger y) {
+//        NSLog(@"Valor x: %d, Valor y: %d\n",x,y);
+//    }];
+//    [self thirdBlockMethodTypeDef:^(NSInteger x, NSInteger y) {
+//        NSLog(@"Valor x2+y2: %d\n",x+y);
+//    }];
+    
+    SimpleCounter * counter = [[SimpleCounter alloc] init];
+    //[counter countToTenThousandAndNotifyObserver:self withSelector:@selector(tenThousandCounts)];
+    
+    [counter countToTenThousandBlock:^(BOOL completed) {
+        if (completed){
+            NSLog(@"Fin");
+        }
     }];
     
 }
+
+- (void)tenThousandCounts {
+    NSLog(@"Fin");
+}
+
+
 
 - (void)firstBlock{
     NSInteger (^firstBlock)(NSInteger, NSInteger) = ^NSInteger(NSInteger a, NSInteger b){
