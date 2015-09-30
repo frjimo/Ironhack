@@ -7,6 +7,7 @@
 //
 
 #import "DetailShowsViewController.h"
+#import "BlockButtonItem.h"
 
 @interface DetailShowsViewController ()
 
@@ -19,6 +20,11 @@
     
     self.labelDetail.text = self.show.showDescription;
     self.imageDetail.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.show.posterURL]];
+    
+    
+    self.navigationItem.rightBarButtonItem = [[BlockButtonItem alloc] initWithTitle:@"Like" customBlock:^{
+        NSLog(@"Like");
+    }];
     
     
 }

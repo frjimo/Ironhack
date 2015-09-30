@@ -29,6 +29,7 @@
 		8C070AEE1BB9E61B0000F8CC /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C070AEC1BB9E61B0000F8CC /* UserEntity.m */; settings = {ASSET_TAGS = (); }; };
 		8C070AF11BB9F03D0000F8CC /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C070AF01BB9F03D0000F8CC /* ProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A163082C1BBC1C02005B52D6 /* DetailShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A163082B1BBC1C02005B52D6 /* DetailShowsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A163082F1BBC31C3005B52D6 /* BlockButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A163082E1BBC31C3005B52D6 /* BlockButtonItem.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		8C070AF01BB9F03D0000F8CC /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		A163082A1BBC1C02005B52D6 /* DetailShowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailShowsViewController.h; sourceTree = "<group>"; };
 		A163082B1BBC1C02005B52D6 /* DetailShowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailShowsViewController.m; sourceTree = "<group>"; };
+		A163082D1BBC31C3005B52D6 /* BlockButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockButtonItem.h; sourceTree = "<group>"; };
+		A163082E1BBC31C3005B52D6 /* BlockButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockButtonItem.m; sourceTree = "<group>"; };
 		A2DB692DC4B737C0D6205A1D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +174,8 @@
 				8C0709BE1BB8416B0000F8CC /* Show.m */,
 				A163082A1BBC1C02005B52D6 /* DetailShowsViewController.h */,
 				A163082B1BBC1C02005B52D6 /* DetailShowsViewController.m */,
+				A163082D1BBC31C3005B52D6 /* BlockButtonItem.h */,
+				A163082E1BBC31C3005B52D6 /* BlockButtonItem.m */,
 				8C0709C91BB85CD40000F8CC /* ShowsProvider.h */,
 				8C0709CA1BB85CD40000F8CC /* ShowsProvider.m */,
 				8C07098D1BB8408F0000F8CC /* ShowsTableViewController.h */,
@@ -392,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A163082F1BBC31C3005B52D6 /* BlockButtonItem.m in Sources */,
 				8C0709CB1BB85CD40000F8CC /* ShowsProvider.m in Sources */,
 				8C0709C51BB842770000F8CC /* NSString+Random.m in Sources */,
 				8C0709C21BB841940000F8CC /* Movie.m in Sources */,
