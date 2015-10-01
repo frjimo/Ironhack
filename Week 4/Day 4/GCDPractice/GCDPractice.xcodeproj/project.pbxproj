@@ -15,6 +15,7 @@
 		A1926F5A1BBD21DD009739A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1926F581BBD21DD009739A5 /* LaunchScreen.storyboard */; };
 		A1926F651BBD21DD009739A5 /* GCDPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1926F641BBD21DD009739A5 /* GCDPracticeTests.m */; };
 		A1926F701BBD21DD009739A5 /* GCDPracticeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1926F6F1BBD21DD009739A5 /* GCDPracticeUITests.m */; };
+		A1926F7F1BBD33BC009739A5 /* FotosManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1926F7E1BBD33BC009739A5 /* FotosManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		A1926F6B1BBD21DD009739A5 /* GCDPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCDPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1926F6F1BBD21DD009739A5 /* GCDPracticeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDPracticeUITests.m; sourceTree = "<group>"; };
 		A1926F711BBD21DD009739A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1926F7D1BBD33BC009739A5 /* FotosManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FotosManager.h; sourceTree = "<group>"; };
+		A1926F7E1BBD33BC009739A5 /* FotosManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FotosManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				A1926F4E1BBD21DD009739A5 /* AppDelegate.m */,
 				A1926F501BBD21DD009739A5 /* ViewController.h */,
 				A1926F511BBD21DD009739A5 /* ViewController.m */,
+				A1926F7D1BBD33BC009739A5 /* FotosManager.h */,
+				A1926F7E1BBD33BC009739A5 /* FotosManager.m */,
 				A1926F531BBD21DD009739A5 /* Main.storyboard */,
 				A1926F561BBD21DD009739A5 /* Assets.xcassets */,
 				A1926F581BBD21DD009739A5 /* LaunchScreen.storyboard */,
@@ -273,6 +278,7 @@
 				A1926F521BBD21DD009739A5 /* ViewController.m in Sources */,
 				A1926F4F1BBD21DD009739A5 /* AppDelegate.m in Sources */,
 				A1926F4C1BBD21DD009739A5 /* main.m in Sources */,
+				A1926F7F1BBD33BC009739A5 /* FotosManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
