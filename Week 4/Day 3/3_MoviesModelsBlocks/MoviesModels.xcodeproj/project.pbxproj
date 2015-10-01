@@ -30,6 +30,7 @@
 		8C070AF11BB9F03D0000F8CC /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C070AF01BB9F03D0000F8CC /* ProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A163082C1BBC1C02005B52D6 /* DetailShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A163082B1BBC1C02005B52D6 /* DetailShowsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A163082F1BBC31C3005B52D6 /* BlockButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A163082E1BBC31C3005B52D6 /* BlockButtonItem.m */; settings = {ASSET_TAGS = (); }; };
+		A16308321BBC38A2005B52D6 /* UIAlertAction+UIAlertView_Block.m in Sources */ = {isa = PBXBuildFile; fileRef = A16308311BBC38A2005B52D6 /* UIAlertAction+UIAlertView_Block.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,8 @@
 		A163082B1BBC1C02005B52D6 /* DetailShowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailShowsViewController.m; sourceTree = "<group>"; };
 		A163082D1BBC31C3005B52D6 /* BlockButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockButtonItem.h; sourceTree = "<group>"; };
 		A163082E1BBC31C3005B52D6 /* BlockButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockButtonItem.m; sourceTree = "<group>"; };
+		A16308301BBC38A2005B52D6 /* UIAlertAction+UIAlertView_Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertAction+UIAlertView_Block.h"; sourceTree = "<group>"; };
+		A16308311BBC38A2005B52D6 /* UIAlertAction+UIAlertView_Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertAction+UIAlertView_Block.m"; sourceTree = "<group>"; };
 		A2DB692DC4B737C0D6205A1D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				8C0709881BB8408F0000F8CC /* main.m */,
+				A16308301BBC38A2005B52D6 /* UIAlertAction+UIAlertView_Block.h */,
+				A16308311BBC38A2005B52D6 /* UIAlertAction+UIAlertView_Block.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16308321BBC38A2005B52D6 /* UIAlertAction+UIAlertView_Block.m in Sources */,
 				A163082F1BBC31C3005B52D6 /* BlockButtonItem.m in Sources */,
 				8C0709CB1BB85CD40000F8CC /* ShowsProvider.m in Sources */,
 				8C0709C51BB842770000F8CC /* NSString+Random.m in Sources */,
@@ -553,6 +559,7 @@
 			baseConfigurationReference = A2DB692DC4B737C0D6205A1D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = MoviesModels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ih.MoviesModels;
@@ -565,6 +572,7 @@
 			baseConfigurationReference = 324A13DB270DCF56B97A9B41 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = MoviesModels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ih.MoviesModels;
