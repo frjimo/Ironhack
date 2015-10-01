@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3xC-sr-ggx">
+                                <rect key="frame" x="20" y="20" width="560" height="270"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RE-CR-U46">
+                                <rect key="frame" x="28" y="395" width="30" height="30"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="goButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MuG-Vh-dfE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65A-6w-SkA">
+                                <rect key="frame" x="532" y="395" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="CancelButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QJk-LP-Cgf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="65A-6w-SkA" secondAttribute="trailing" id="6Yb-RZ-00J"/>
+                            <constraint firstItem="9RE-CR-U46" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="EGg-qI-opN"/>
+                            <constraint firstItem="3xC-sr-ggx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qko-rW-d34"/>
+                            <constraint firstItem="3xC-sr-ggx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.45" id="RUg-0g-NqI"/>
+                            <constraint firstItem="3xC-sr-ggx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Xtu-ZE-H3F"/>
+                            <constraint firstItem="65A-6w-SkA" firstAttribute="top" secondItem="3xC-sr-ggx" secondAttribute="bottom" constant="105" id="b9j-uK-NEo"/>
+                            <constraint firstItem="3xC-sr-ggx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cFg-VL-IVg"/>
+                            <constraint firstItem="3xC-sr-ggx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iW2-fe-HsO"/>
+                            <constraint firstItem="9RE-CR-U46" firstAttribute="top" secondItem="3xC-sr-ggx" secondAttribute="bottom" constant="105" id="kbf-W2-Re4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3xC-sr-ggx" secondAttribute="bottom" constant="280" id="xFs-78-BT0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xFs-78-BT0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="65A-6w-SkA" id="eMb-h7-YSg"/>
+                        <outlet property="goButton" destination="9RE-CR-U46" id="MxT-He-SCS"/>
+                        <outlet property="imageView" destination="3xC-sr-ggx" id="4Db-So-glz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="387"/>
+        </scene>
+    </scenes>
+</document>
