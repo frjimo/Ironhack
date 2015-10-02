@@ -14,6 +14,10 @@
 - (void)setImageWithURL:(NSURL *)imageURL completion:(void (^)(BOOL succes))completion {
         [[ImageDownloader sharedInstance] downloadImageWithURL:[imageURL absoluteString] completion:^(UIImage *image) {
             self.image = image;
+            
+            if (completion) {
+                completion(image ? YES : NO);
+            }
         }];
 }
 

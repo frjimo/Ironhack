@@ -12,6 +12,8 @@
 #import "UIAlertView+Block.h"
 #import "Show.h"
 
+#import "UIImageView+Downloads.h"
+
 @interface ShowDetailViewController ()
 
 @property (nonatomic, weak) IBOutlet UILabel *detailLabel;
@@ -26,7 +28,10 @@
     [super viewDidLoad];
 
     self.detailLabel.text = self.show.showDescription;
-    self.detailImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.show.posterURL]];
+    
+    [self.detailImageView setImageWithURL:self.show.posterURL completion:nil];
+    
+    //self.detailImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.show.posterURL]];
     
     self.navigationItem.rightBarButtonItem = [[BlockButtonItem alloc] initWithTitle:@"Like" block:^{
         
