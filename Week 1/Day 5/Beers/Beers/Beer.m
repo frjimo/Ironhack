@@ -16,7 +16,7 @@
 
 + (instancetype)beerWithName:(NSString*)name color:(NSString *)color grade:(NSInteger )grade
 {
-    return [[self alloc] beerWithName:name color:color grade:grade];
+    return [[self alloc] initWithName:name color:color grade:grade];
 }
 
 
