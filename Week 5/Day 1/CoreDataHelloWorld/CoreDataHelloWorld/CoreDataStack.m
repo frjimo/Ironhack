@@ -9,9 +9,26 @@
 #import "CoreDataStack.h"
 #import "FileUtils.h"
 
+@interface CoreDataStack ()
+
+@property (nonatomic, copy) NSString *fileName;
+@property (nonatomic, copy) NSString *storeType;
+
+
+@end
+
 @implementation CoreDataStack
 
 @synthesize managedObjectContext = _managedObjectContext;
+
+- (instancetype)initWithDatabaseFileName:(NSString *)fileName andPersitenceType:(NSString *)storeType{
+    self = [super init];
+    if (self){
+        _fileName = fileName;
+        _storeType = storeType;
+    }
+    return self;
+}
 
 - (NSManagedObjectContext *)managedObjectContext {
     // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)

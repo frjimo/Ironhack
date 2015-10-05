@@ -15,10 +15,14 @@
 		A15D593C1BC2662C0056D792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15D593A1BC2662C0056D792 /* Main.storyboard */; };
 		A15D593E1BC2662C0056D792 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A15D593D1BC2662C0056D792 /* Assets.xcassets */; };
 		A15D59411BC2662C0056D792 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15D593F1BC2662C0056D792 /* LaunchScreen.storyboard */; };
-		A15D594C1BC2662C0056D792 /* CoreDataHelloWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A15D594B1BC2662C0056D792 /* CoreDataHelloWorldTests.m */; };
 		A15D59571BC2662C0056D792 /* CoreDataHelloWorldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A15D59561BC2662C0056D792 /* CoreDataHelloWorldUITests.m */; };
 		A15D59681BC26C810056D792 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A15D59671BC26C810056D792 /* CoreDataStack.m */; settings = {ASSET_TAGS = (); }; };
 		A15D596B1BC2723A0056D792 /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A15D596A1BC2723A0056D792 /* FileUtils.m */; settings = {ASSET_TAGS = (); }; };
+		A15D596D1BC2AD950056D792 /* FizzBuzzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A15D596C1BC2AD950056D792 /* FizzBuzzTests.m */; settings = {ASSET_TAGS = (); }; };
+		A15D59701BC2ADE60056D792 /* FizzBuzz.m in Sources */ = {isa = PBXBuildFile; fileRef = A15D596F1BC2ADE60056D792 /* FizzBuzz.m */; settings = {ASSET_TAGS = (); }; };
+		A15D59751BC2BC460056D792 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A15D59721BC2BC460056D792 /* Person+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		A15D59761BC2BC460056D792 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A15D59741BC2BC460056D792 /* Person.m */; settings = {ASSET_TAGS = (); }; };
+		A15D59791BC2C7BA0056D792 /* PersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A15D59781BC2C7BA0056D792 /* PersonTests.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +57,6 @@
 		A15D59401BC2662C0056D792 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A15D59421BC2662C0056D792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15D59471BC2662C0056D792 /* CoreDataHelloWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataHelloWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A15D594B1BC2662C0056D792 /* CoreDataHelloWorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelloWorldTests.m; sourceTree = "<group>"; };
 		A15D594D1BC2662C0056D792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15D59521BC2662C0056D792 /* CoreDataHelloWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataHelloWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15D59561BC2662C0056D792 /* CoreDataHelloWorldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelloWorldUITests.m; sourceTree = "<group>"; };
@@ -62,6 +65,14 @@
 		A15D59671BC26C810056D792 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		A15D59691BC2723A0056D792 /* FileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtils.h; sourceTree = "<group>"; };
 		A15D596A1BC2723A0056D792 /* FileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtils.m; sourceTree = "<group>"; };
+		A15D596C1BC2AD950056D792 /* FizzBuzzTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FizzBuzzTests.m; sourceTree = "<group>"; };
+		A15D596E1BC2ADE60056D792 /* FizzBuzz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FizzBuzz.h; sourceTree = "<group>"; };
+		A15D596F1BC2ADE60056D792 /* FizzBuzz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FizzBuzz.m; sourceTree = "<group>"; };
+		A15D59711BC2BC460056D792 /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataProperties.h"; sourceTree = "<group>"; };
+		A15D59721BC2BC460056D792 /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataProperties.m"; sourceTree = "<group>"; };
+		A15D59731BC2BC460056D792 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		A15D59741BC2BC460056D792 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		A15D59781BC2C7BA0056D792 /* PersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,19 +123,22 @@
 		A15D592A1BC2662C0056D792 /* CoreDataHelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				A15D59641BC266CE0056D792 /* Controller */,
+				A15D59771BC2BD120056D792 /* Model */,
+				A15D592B1BC2662C0056D792 /* Supporting Files */,
+				A15D59651BC266E10056D792 /* View */,
 				A15D592E1BC2662C0056D792 /* AppDelegate.h */,
 				A15D592F1BC2662C0056D792 /* AppDelegate.m */,
+				A15D593D1BC2662C0056D792 /* Assets.xcassets */,
+				A15D59311BC2662C0056D792 /* CoreDataHelloWorld.xcdatamodeld */,
 				A15D59661BC26C810056D792 /* CoreDataStack.h */,
 				A15D59671BC26C810056D792 /* CoreDataStack.m */,
 				A15D59691BC2723A0056D792 /* FileUtils.h */,
 				A15D596A1BC2723A0056D792 /* FileUtils.m */,
-				A15D59641BC266CE0056D792 /* Controller */,
-				A15D59651BC266E10056D792 /* View */,
-				A15D593D1BC2662C0056D792 /* Assets.xcassets */,
-				A15D593F1BC2662C0056D792 /* LaunchScreen.storyboard */,
+				A15D596E1BC2ADE60056D792 /* FizzBuzz.h */,
+				A15D596F1BC2ADE60056D792 /* FizzBuzz.m */,
 				A15D59421BC2662C0056D792 /* Info.plist */,
-				A15D59311BC2662C0056D792 /* CoreDataHelloWorld.xcdatamodeld */,
-				A15D592B1BC2662C0056D792 /* Supporting Files */,
+				A15D593F1BC2662C0056D792 /* LaunchScreen.storyboard */,
 			);
 			path = CoreDataHelloWorld;
 			sourceTree = "<group>";
@@ -134,14 +148,15 @@
 			children = (
 				A15D592C1BC2662C0056D792 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A15D594A1BC2662C0056D792 /* CoreDataHelloWorldTests */ = {
 			isa = PBXGroup;
 			children = (
-				A15D594B1BC2662C0056D792 /* CoreDataHelloWorldTests.m */,
+				A15D596C1BC2AD950056D792 /* FizzBuzzTests.m */,
 				A15D594D1BC2662C0056D792 /* Info.plist */,
+				A15D59781BC2C7BA0056D792 /* PersonTests.m */,
 			);
 			path = CoreDataHelloWorldTests;
 			sourceTree = "<group>";
@@ -158,12 +173,12 @@
 		A15D59641BC266CE0056D792 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A15D59341BC2662C0056D792 /* MasterViewController.h */,
-				A15D59351BC2662C0056D792 /* MasterViewController.m */,
 				A15D59371BC2662C0056D792 /* DetailViewController.h */,
 				A15D59381BC2662C0056D792 /* DetailViewController.m */,
+				A15D59341BC2662C0056D792 /* MasterViewController.h */,
+				A15D59351BC2662C0056D792 /* MasterViewController.m */,
 			);
-			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A15D59651BC266E10056D792 /* View */ = {
@@ -171,7 +186,18 @@
 			children = (
 				A15D593A1BC2662C0056D792 /* Main.storyboard */,
 			);
-			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		A15D59771BC2BD120056D792 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A15D59711BC2BC460056D792 /* Person+CoreDataProperties.h */,
+				A15D59721BC2BC460056D792 /* Person+CoreDataProperties.m */,
+				A15D59731BC2BC460056D792 /* Person.h */,
+				A15D59741BC2BC460056D792 /* Person.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,10 +332,13 @@
 			files = (
 				A15D59391BC2662C0056D792 /* DetailViewController.m in Sources */,
 				A15D59361BC2662C0056D792 /* MasterViewController.m in Sources */,
+				A15D59761BC2BC460056D792 /* Person.m in Sources */,
 				A15D596B1BC2723A0056D792 /* FileUtils.m in Sources */,
+				A15D59701BC2ADE60056D792 /* FizzBuzz.m in Sources */,
 				A15D59301BC2662C0056D792 /* AppDelegate.m in Sources */,
 				A15D592D1BC2662C0056D792 /* main.m in Sources */,
 				A15D59331BC2662C0056D792 /* CoreDataHelloWorld.xcdatamodeld in Sources */,
+				A15D59751BC2BC460056D792 /* Person+CoreDataProperties.m in Sources */,
 				A15D59681BC26C810056D792 /* CoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +347,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A15D594C1BC2662C0056D792 /* CoreDataHelloWorldTests.m in Sources */,
+				A15D59791BC2C7BA0056D792 /* PersonTests.m in Sources */,
+				A15D596D1BC2AD950056D792 /* FizzBuzzTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +382,7 @@
 				A15D593B1BC2662C0056D792 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		A15D593F1BC2662C0056D792 /* LaunchScreen.storyboard */ = {
@@ -360,6 +391,7 @@
 				A15D59401BC2662C0056D792 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -534,6 +566,7 @@
 				A15D595D1BC2662C0056D792 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A15D595E1BC2662C0056D792 /* Build configuration list for PBXNativeTarget "CoreDataHelloWorldTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +575,7 @@
 				A15D59601BC2662C0056D792 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A15D59611BC2662C0056D792 /* Build configuration list for PBXNativeTarget "CoreDataHelloWorldUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +584,7 @@
 				A15D59631BC2662C0056D792 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
