@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RadarTableViewController.h
 //  Radar
 //
 //  Created by Fran on 6/10/15.
@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface ViewController : UIViewController
+@interface RadarTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
-

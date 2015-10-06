@@ -8,7 +8,10 @@
 
 #import "AppDelegate.h"
 #import "CoreDataStack.h"
-#import "ViewController.h"
+
+#import "NSString+Random.h"
+#import "RadarTableViewController.h"
+#import "FakeRadarGenerator.h"
 
 @interface AppDelegate ()
 
@@ -20,19 +23,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
-    ViewController *controller = [[ViewController alloc]init];
+    self.cds = [[CoreDataStack alloc]initWithDatabaseFileName:@"radars.sqlite" andPersitenceType:NSSQLiteStoreType];
     
     
-    self.cds = [[CoreDataStack alloc]initWithDatabaseFileName:@"helloworld.sqlite" andPersitenceType:NSSQLiteStoreType];
+    [[[FakeRadarGenerator alloc]init] generateRadarsInContext:self.cds.managedObjectContext];
+    
+    
+    UINavigationController *nav = (UINavigationController *)self.window.rootViewController;
+    RadarTableViewController *controller = (RadarTableViewController *) nav.topViewController;
     controller.managedObjectContext = self.cds.managedObjectContext;
     
-    
-    self.window.rootViewController = controller;
-    [self.window makeKeyAndVisible];
+//    (
+//    (RadarTableViewController *)nav.topViewController
+//     ).managedObjectContext
+//    =
+//    self.cds.managedObjectContext;
     
     return YES;
 }

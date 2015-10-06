@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A1C6A9AA1BC3D0C300062C2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A9A91BC3D0C300062C2D /* main.m */; };
 		A1C6A9AD1BC3D0C300062C2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A9AC1BC3D0C300062C2D /* AppDelegate.m */; };
-		A1C6A9B01BC3D0C300062C2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A9AF1BC3D0C300062C2D /* ViewController.m */; };
 		A1C6A9B31BC3D0C300062C2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C6A9B11BC3D0C300062C2D /* Main.storyboard */; };
 		A1C6A9B51BC3D0C300062C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C6A9B41BC3D0C300062C2D /* Assets.xcassets */; };
 		A1C6A9B81BC3D0C300062C2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C6A9B61BC3D0C300062C2D /* LaunchScreen.storyboard */; };
@@ -23,6 +22,9 @@
 		A1C6A9EF1BC3D3D700062C2D /* Radar.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A9ED1BC3D3D700062C2D /* Radar.m */; settings = {ASSET_TAGS = (); }; };
 		A1C6A9F31BC3DECE00062C2D /* NSManagedObjectContext+FJInsertManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A9F21BC3DECE00062C2D /* NSManagedObjectContext+FJInsertManagedObject.m */; settings = {ASSET_TAGS = (); }; };
 		A1C6A9F61BC3F37A00062C2D /* FakeRadarGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A9F51BC3F37A00062C2D /* FakeRadarGenerator.m */; settings = {ASSET_TAGS = (); }; };
+		A1C6A9F91BC3FD8300062C2D /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A9F81BC3FD8300062C2D /* NSString+Random.m */; settings = {ASSET_TAGS = (); }; };
+		A1C6AA021BC3FEE500062C2D /* RadarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C6AA011BC3FEE500062C2D /* RadarTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A1C6AA051BC406F300062C2D /* RadarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C6AA041BC406F300062C2D /* RadarCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +49,6 @@
 		A1C6A9A91BC3D0C300062C2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A1C6A9AB1BC3D0C300062C2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1C6A9AC1BC3D0C300062C2D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A1C6A9AE1BC3D0C300062C2D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A1C6A9AF1BC3D0C300062C2D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A1C6A9B21BC3D0C300062C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1C6A9B41BC3D0C300062C2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1C6A9B71BC3D0C300062C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,8 +72,14 @@
 		A1C6A9ED1BC3D3D700062C2D /* Radar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Radar.m; sourceTree = "<group>"; };
 		A1C6A9F11BC3DECE00062C2D /* NSManagedObjectContext+FJInsertManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+FJInsertManagedObject.h"; sourceTree = "<group>"; };
 		A1C6A9F21BC3DECE00062C2D /* NSManagedObjectContext+FJInsertManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+FJInsertManagedObject.m"; sourceTree = "<group>"; };
-		A1C6A9F41BC3F37A00062C2D /* FakeRadarGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeRadarGenerator.h; sourceTree = "<group>"; };
-		A1C6A9F51BC3F37A00062C2D /* FakeRadarGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeRadarGenerator.m; sourceTree = "<group>"; };
+		A1C6A9F41BC3F37A00062C2D /* FakeRadarGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FakeRadarGenerator.h; path = ../FakeRadarGenerator.h; sourceTree = "<group>"; };
+		A1C6A9F51BC3F37A00062C2D /* FakeRadarGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FakeRadarGenerator.m; path = ../FakeRadarGenerator.m; sourceTree = "<group>"; };
+		A1C6A9F71BC3FD8300062C2D /* NSString+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Random.h"; sourceTree = "<group>"; };
+		A1C6A9F81BC3FD8300062C2D /* NSString+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Random.m"; sourceTree = "<group>"; };
+		A1C6AA001BC3FEE500062C2D /* RadarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarTableViewController.h; sourceTree = "<group>"; };
+		A1C6AA011BC3FEE500062C2D /* RadarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarTableViewController.m; sourceTree = "<group>"; };
+		A1C6AA031BC406F300062C2D /* RadarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarCell.h; sourceTree = "<group>"; };
+		A1C6AA041BC406F300062C2D /* RadarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,8 +173,8 @@
 		A1C6A9E41BC3D2CE00062C2D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A1C6A9AE1BC3D0C300062C2D /* ViewController.h */,
-				A1C6A9AF1BC3D0C300062C2D /* ViewController.m */,
+				A1C6AA001BC3FEE500062C2D /* RadarTableViewController.h */,
+				A1C6AA011BC3FEE500062C2D /* RadarTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -184,6 +190,8 @@
 				A1C6A9E01BC3D16200062C2D /* SharedCoreDataStack.m */,
 				A1C6A9F11BC3DECE00062C2D /* NSManagedObjectContext+FJInsertManagedObject.h */,
 				A1C6A9F21BC3DECE00062C2D /* NSManagedObjectContext+FJInsertManagedObject.m */,
+				A1C6A9F41BC3F37A00062C2D /* FakeRadarGenerator.h */,
+				A1C6A9F51BC3F37A00062C2D /* FakeRadarGenerator.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -192,6 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				A1C6A9B11BC3D0C300062C2D /* Main.storyboard */,
+				A1C6AA031BC406F300062C2D /* RadarCell.h */,
+				A1C6AA041BC406F300062C2D /* RadarCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -204,8 +214,8 @@
 				A1C6A9EC1BC3D3D700062C2D /* Radar.h */,
 				A1C6A9ED1BC3D3D700062C2D /* Radar.m */,
 				A1C6A9E71BC3D32000062C2D /* Radar.xcdatamodeld */,
-				A1C6A9F41BC3F37A00062C2D /* FakeRadarGenerator.h */,
-				A1C6A9F51BC3F37A00062C2D /* FakeRadarGenerator.m */,
+				A1C6A9F71BC3FD8300062C2D /* NSString+Random.h */,
+				A1C6A9F81BC3FD8300062C2D /* NSString+Random.m */,
 			);
 			name = Model;
 			path = ..;
@@ -344,13 +354,15 @@
 				A1C6A9EF1BC3D3D700062C2D /* Radar.m in Sources */,
 				A1C6A9F31BC3DECE00062C2D /* NSManagedObjectContext+FJInsertManagedObject.m in Sources */,
 				A1C6A9E21BC3D16200062C2D /* FileUtils.m in Sources */,
-				A1C6A9B01BC3D0C300062C2D /* ViewController.m in Sources */,
 				A1C6A9EE1BC3D3D700062C2D /* Radar+CoreDataProperties.m in Sources */,
 				A1C6A9E31BC3D16200062C2D /* SharedCoreDataStack.m in Sources */,
 				A1C6A9F61BC3F37A00062C2D /* FakeRadarGenerator.m in Sources */,
 				A1C6A9AD1BC3D0C300062C2D /* AppDelegate.m in Sources */,
+				A1C6AA051BC406F300062C2D /* RadarCell.m in Sources */,
+				A1C6A9F91BC3FD8300062C2D /* NSString+Random.m in Sources */,
 				A1C6A9AA1BC3D0C300062C2D /* main.m in Sources */,
 				A1C6A9E91BC3D32000062C2D /* Radar.xcdatamodeld in Sources */,
+				A1C6AA021BC3FEE500062C2D /* RadarTableViewController.m in Sources */,
 				A1C6A9E11BC3D16200062C2D /* CoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

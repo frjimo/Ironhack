@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CoreDataStack.h"
 
 @interface FakeRadarGenerator : NSObject
 
-- (void)generateRadarsInContext;
+- (BOOL)generateRadarsInContext:(NSManagedObjectContext *)context;
 
 @end
