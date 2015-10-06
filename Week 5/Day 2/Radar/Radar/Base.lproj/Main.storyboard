@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xfH-Xe-Ckg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Radars-->
@@ -37,6 +38,7 @@
                                 <connections>
                                     <outlet property="radarText" destination="tZv-gM-gKC" id="hPG-tY-j16"/>
                                     <outlet property="radarUser" destination="mH6-78-ZCE" id="ghF-kw-jkd"/>
+                                    <segue destination="UK4-bn-X9q" kind="show" identifier="Detail" id="9pL-Dt-HFS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -50,6 +52,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxD-wj-l8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1121" y="454"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="54N-LM-W6H">
+            <objects>
+                <viewController id="UK4-bn-X9q" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5fe-jx-Tws"/>
+                        <viewControllerLayoutGuide type="bottom" id="Erf-i1-pvT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wi4-mC-TyF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Autor" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdA-T5-RNA">
+                                <rect key="frame" x="20" y="90" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yzr-G4-5VV">
+                                <rect key="frame" x="20" y="154" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rdA-T5-RNA" firstAttribute="top" secondItem="5fe-jx-Tws" secondAttribute="bottom" constant="26" id="B18-NY-Hg1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yzr-G4-5VV" secondAttribute="trailing" id="Dpm-Js-Plo"/>
+                            <constraint firstItem="Yzr-G4-5VV" firstAttribute="top" secondItem="rdA-T5-RNA" secondAttribute="bottom" constant="34" id="LPi-t0-RM4"/>
+                            <constraint firstItem="rdA-T5-RNA" firstAttribute="centerX" secondItem="wi4-mC-TyF" secondAttribute="centerX" id="Nfu-9d-Zi5"/>
+                            <constraint firstItem="rdA-T5-RNA" firstAttribute="centerX" secondItem="wi4-mC-TyF" secondAttribute="centerX" id="ShF-ws-SDZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rdA-T5-RNA" secondAttribute="trailing" id="dVd-tp-jOc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="rdA-T5-RNA" secondAttribute="leading" id="rkf-oo-jGU"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Yzr-G4-5VV" secondAttribute="leading" id="u1F-4Y-uzE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="autorTextField" destination="rdA-T5-RNA" id="kda-dy-xLr"/>
+                        <outlet property="descriptionTextField" destination="Yzr-G4-5VV" id="5ef-pf-1ct"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppz-Pb-hZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="454"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dBO-uk-2Gh">

@@ -8,6 +8,7 @@
 
 #import "RadarTableViewController.h"
 #import "RadarCell.h"
+#import "DetailViewController.h"
 
 @interface RadarTableViewController ()
 
@@ -28,6 +29,14 @@
     NSAssert(self.managedObjectContext != nil, @"Pete");
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"Detail"]){
+        DetailViewController *detailViewController = segue.destinationViewController;
+
+        Radar *radar = [self.fetchedResultsController objectAtIndexPath: self.tableView.indexPathForSelectedRow];
+        detailViewController.radar = radar;
+    }
+}
 
 #pragma mark - Table view data source
 
@@ -88,7 +97,7 @@
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
     
     
-    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     
     _fetchedResultsController.delegate = self;
     

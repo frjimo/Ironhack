@@ -25,6 +25,7 @@
 		A1C6A9F91BC3FD8300062C2D /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A9F81BC3FD8300062C2D /* NSString+Random.m */; settings = {ASSET_TAGS = (); }; };
 		A1C6AA021BC3FEE500062C2D /* RadarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C6AA011BC3FEE500062C2D /* RadarTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A1C6AA051BC406F300062C2D /* RadarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C6AA041BC406F300062C2D /* RadarCell.m */; settings = {ASSET_TAGS = (); }; };
+		A1C6AA081BC41BE200062C2D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C6AA071BC41BE200062C2D /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		A1C6AA011BC3FEE500062C2D /* RadarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarTableViewController.m; sourceTree = "<group>"; };
 		A1C6AA031BC406F300062C2D /* RadarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarCell.h; sourceTree = "<group>"; };
 		A1C6AA041BC406F300062C2D /* RadarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarCell.m; sourceTree = "<group>"; };
+		A1C6AA061BC41BE200062C2D /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A1C6AA071BC41BE200062C2D /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,8 @@
 			children = (
 				A1C6AA001BC3FEE500062C2D /* RadarTableViewController.h */,
 				A1C6AA011BC3FEE500062C2D /* RadarTableViewController.m */,
+				A1C6AA061BC41BE200062C2D /* DetailViewController.h */,
+				A1C6AA071BC41BE200062C2D /* DetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 				A1C6A9E91BC3D32000062C2D /* Radar.xcdatamodeld in Sources */,
 				A1C6AA021BC3FEE500062C2D /* RadarTableViewController.m in Sources */,
 				A1C6A9E11BC3D16200062C2D /* CoreDataStack.m in Sources */,
+				A1C6AA081BC41BE200062C2D /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
