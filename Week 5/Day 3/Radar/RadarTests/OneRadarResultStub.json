@@ -1,0 +1,7 @@
+{
+    "result": [{"resolved": "",
+               "status": "Open",
+               "product": "Apple TV",
+               "description": "This is a duplicate of rdar://22786605\n\nSummary:\nThe always connected 4th gen AppleTV with its tvOS is a superb companion for iOS devices. But the connection is severely limited due to its missing MultiPeerConnectivity framework.\n\nExpected Results:\nPlease reconsider and provide the same MultiPeerConnectivity API/framework on tvOS too.", "parent": null, "originated": "06-Oct-2015 06:53 PM", "product_version": "", "number": "23003256", "user": "jedi@group6.net", "id": 5000600525733888, "classification": "Enhancement", "created": "2015-10-07 01:53:35.476190", "title": "Multipeer Connectivity for tvOS", "modified": "2015-10-07 01:53:35.476350", "reproducible": "Always"}
+               ]
+}
