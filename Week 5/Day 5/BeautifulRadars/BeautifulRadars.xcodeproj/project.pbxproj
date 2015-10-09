@@ -1,0 +1,715 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9933721D1BC507BF002C6A21 /* RadarAPIWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9933721C1BC507BF002C6A21 /* RadarAPIWrapper.m */; settings = {ASSET_TAGS = (); }; };
+		993372211BC51D43002C6A21 /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 993372201BC51D43002C6A21 /* JSONParser.m */; settings = {ASSET_TAGS = (); }; };
+		993372281BC54D7E002C6A21 /* JSONParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 993372271BC54D7E002C6A21 /* JSONParserTests.m */; settings = {ASSET_TAGS = (); }; };
+		9933722B1BC55861002C6A21 /* OneRadarResultStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 9933722A1BC55861002C6A21 /* OneRadarResultStub.json */; settings = {ASSET_TAGS = (); }; };
+		9933722F1BC562E4002C6A21 /* StubFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9933722E1BC562E4002C6A21 /* StubFileUtil.m */; settings = {ASSET_TAGS = (); }; };
+		99AE34971BC3D71100CAC424 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34961BC3D71100CAC424 /* main.m */; };
+		99AE349A1BC3D71100CAC424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34991BC3D71100CAC424 /* AppDelegate.m */; };
+		99AE34A21BC3D71100CAC424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99AE34A11BC3D71100CAC424 /* Assets.xcassets */; };
+		99AE34A51BC3D71100CAC424 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99AE34A31BC3D71100CAC424 /* Storyboard.storyboard */; };
+		99AE34BB1BC3D71100CAC424 /* BeautifulRadarsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34BA1BC3D71100CAC424 /* BeautifulRadarsUITests.m */; };
+		99AE34CE1BC3D80500CAC424 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34CC1BC3D80500CAC424 /* Model.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		99AE34D31BC3DA4A00CAC424 /* Radar+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34D01BC3DA4A00CAC424 /* Radar+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		99AE34D41BC3DA4A00CAC424 /* Radar.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34D21BC3DA4A00CAC424 /* Radar.m */; settings = {ASSET_TAGS = (); }; };
+		99AE34D61BC3DBEF00CAC424 /* RadarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34D51BC3DBEF00CAC424 /* RadarTests.m */; settings = {ASSET_TAGS = (); }; };
+		99AE34DD1BC3DC5800CAC424 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34D81BC3DC5800CAC424 /* CoreDataStack.m */; settings = {ASSET_TAGS = (); }; };
+		99AE34DE1BC3DC5800CAC424 /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34DA1BC3DC5800CAC424 /* FileUtils.m */; settings = {ASSET_TAGS = (); }; };
+		99AE34DF1BC3DC5800CAC424 /* SharedCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34DC1BC3DC5800CAC424 /* SharedCoreDataStack.m */; settings = {ASSET_TAGS = (); }; };
+		99AE34E21BC3DEFF00CAC424 /* NSManagedObjectContext+DFInsertManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34E11BC3DEFF00CAC424 /* NSManagedObjectContext+DFInsertManagedObject.m */; settings = {ASSET_TAGS = (); }; };
+		99AE34E51BC3FF2100CAC424 /* FakeRadarGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34E41BC3FF2100CAC424 /* FakeRadarGenerator.m */; settings = {ASSET_TAGS = (); }; };
+		99AE34E81BC406FA00CAC424 /* RadarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34E71BC406FA00CAC424 /* RadarCell.m */; settings = {ASSET_TAGS = (); }; };
+		99AE34EB1BC40A6100CAC424 /* RadarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34EA1BC40A6100CAC424 /* RadarsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		99AE34ED1BC419AB00CAC424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99AE34EC1BC419AB00CAC424 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		99AE34F01BC4238A00CAC424 /* EditRadarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AE34EF1BC4238A00CAC424 /* EditRadarViewController.m */; settings = {ASSET_TAGS = (); }; };
+		99CA23781BC694FE00D1B573 /* RadarJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CA23771BC694FE00D1B573 /* RadarJSON.m */; settings = {ASSET_TAGS = (); }; };
+		99CA237B1BC69C4E00D1B573 /* NSDate+DFFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CA237A1BC69C4E00D1B573 /* NSDate+DFFormatter.m */; settings = {ASSET_TAGS = (); }; };
+		99CA237D1BC6A93400D1B573 /* EmptyRadarsArrayStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 99CA237C1BC6A93400D1B573 /* EmptyRadarsArrayStub.json */; settings = {ASSET_TAGS = (); }; };
+		99CA23811BC6AA5E00D1B573 /* JSONRadarMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CA23801BC6AA5E00D1B573 /* JSONRadarMapper.m */; settings = {ASSET_TAGS = (); }; };
+		99CA23841BC6B1E900D1B573 /* RadarsViewController+DFNSFetchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CA23831BC6B1E900D1B573 /* RadarsViewController+DFNSFetchResultsController.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99AE34AC1BC3D71100CAC424 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99AE348A1BC3D71100CAC424 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99AE34911BC3D71100CAC424;
+			remoteInfo = BeautifulRadars;
+		};
+		99AE34B71BC3D71100CAC424 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99AE348A1BC3D71100CAC424 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99AE34911BC3D71100CAC424;
+			remoteInfo = BeautifulRadars;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9933721A1BC505E6002C6A21 /* RadarAPIWebServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarAPIWebServiceProtocol.h; sourceTree = "<group>"; };
+		9933721B1BC507BF002C6A21 /* RadarAPIWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarAPIWrapper.h; sourceTree = "<group>"; };
+		9933721C1BC507BF002C6A21 /* RadarAPIWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarAPIWrapper.m; sourceTree = "<group>"; };
+		9933721F1BC51D43002C6A21 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
+		993372201BC51D43002C6A21 /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParser.m; sourceTree = "<group>"; };
+		993372271BC54D7E002C6A21 /* JSONParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParserTests.m; sourceTree = "<group>"; };
+		9933722A1BC55861002C6A21 /* OneRadarResultStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OneRadarResultStub.json; sourceTree = "<group>"; };
+		9933722D1BC562E4002C6A21 /* StubFileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubFileUtil.h; sourceTree = "<group>"; };
+		9933722E1BC562E4002C6A21 /* StubFileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubFileUtil.m; sourceTree = "<group>"; };
+		993372391BC56D58002C6A21 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		99AE34921BC3D71100CAC424 /* BeautifulRadars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautifulRadars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99AE34961BC3D71100CAC424 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		99AE34981BC3D71100CAC424 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		99AE34991BC3D71100CAC424 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		99AE34A11BC3D71100CAC424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99AE34A41BC3D71100CAC424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
+		99AE34A61BC3D71100CAC424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99AE34AB1BC3D71100CAC424 /* BeautifulRadarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautifulRadarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99AE34B11BC3D71100CAC424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99AE34B61BC3D71100CAC424 /* BeautifulRadarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautifulRadarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99AE34BA1BC3D71100CAC424 /* BeautifulRadarsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeautifulRadarsUITests.m; sourceTree = "<group>"; };
+		99AE34BC1BC3D71100CAC424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99AE34CD1BC3D80500CAC424 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		99AE34CF1BC3DA4A00CAC424 /* Radar+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Radar+CoreDataProperties.h"; sourceTree = "<group>"; };
+		99AE34D01BC3DA4A00CAC424 /* Radar+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Radar+CoreDataProperties.m"; sourceTree = "<group>"; };
+		99AE34D11BC3DA4A00CAC424 /* Radar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Radar.h; sourceTree = "<group>"; };
+		99AE34D21BC3DA4A00CAC424 /* Radar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Radar.m; sourceTree = "<group>"; };
+		99AE34D51BC3DBEF00CAC424 /* RadarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarTests.m; sourceTree = "<group>"; };
+		99AE34D71BC3DC5800CAC424 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		99AE34D81BC3DC5800CAC424 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		99AE34D91BC3DC5800CAC424 /* FileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtils.h; sourceTree = "<group>"; };
+		99AE34DA1BC3DC5800CAC424 /* FileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtils.m; sourceTree = "<group>"; };
+		99AE34DB1BC3DC5800CAC424 /* SharedCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedCoreDataStack.h; sourceTree = "<group>"; };
+		99AE34DC1BC3DC5800CAC424 /* SharedCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedCoreDataStack.m; sourceTree = "<group>"; };
+		99AE34E01BC3DEFF00CAC424 /* NSManagedObjectContext+DFInsertManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+DFInsertManagedObject.h"; sourceTree = "<group>"; };
+		99AE34E11BC3DEFF00CAC424 /* NSManagedObjectContext+DFInsertManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+DFInsertManagedObject.m"; sourceTree = "<group>"; };
+		99AE34E31BC3FF2100CAC424 /* FakeRadarGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeRadarGenerator.h; sourceTree = "<group>"; };
+		99AE34E41BC3FF2100CAC424 /* FakeRadarGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeRadarGenerator.m; sourceTree = "<group>"; };
+		99AE34E61BC406FA00CAC424 /* RadarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarCell.h; sourceTree = "<group>"; };
+		99AE34E71BC406FA00CAC424 /* RadarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarCell.m; sourceTree = "<group>"; };
+		99AE34E91BC40A6100CAC424 /* RadarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarsViewController.h; sourceTree = "<group>"; };
+		99AE34EA1BC40A6100CAC424 /* RadarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarsViewController.m; sourceTree = "<group>"; };
+		99AE34EC1BC419AB00CAC424 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99AE34EE1BC4238A00CAC424 /* EditRadarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditRadarViewController.h; sourceTree = "<group>"; };
+		99AE34EF1BC4238A00CAC424 /* EditRadarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditRadarViewController.m; sourceTree = "<group>"; };
+		99CA23761BC694FE00D1B573 /* RadarJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarJSON.h; sourceTree = "<group>"; };
+		99CA23771BC694FE00D1B573 /* RadarJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarJSON.m; sourceTree = "<group>"; };
+		99CA23791BC69C4E00D1B573 /* NSDate+DFFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DFFormatter.h"; sourceTree = "<group>"; };
+		99CA237A1BC69C4E00D1B573 /* NSDate+DFFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DFFormatter.m"; sourceTree = "<group>"; };
+		99CA237C1BC6A93400D1B573 /* EmptyRadarsArrayStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EmptyRadarsArrayStub.json; sourceTree = "<group>"; };
+		99CA237F1BC6AA5E00D1B573 /* JSONRadarMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRadarMapper.h; sourceTree = "<group>"; };
+		99CA23801BC6AA5E00D1B573 /* JSONRadarMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONRadarMapper.m; sourceTree = "<group>"; };
+		99CA23821BC6B1E900D1B573 /* RadarsViewController+DFNSFetchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RadarsViewController+DFNSFetchResultsController.h"; sourceTree = "<group>"; };
+		99CA23831BC6B1E900D1B573 /* RadarsViewController+DFNSFetchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RadarsViewController+DFNSFetchResultsController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99AE348F1BC3D71100CAC424 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99AE34A81BC3D71100CAC424 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99AE34B31BC3D71100CAC424 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		993372191BC50534002C6A21 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				9933721A1BC505E6002C6A21 /* RadarAPIWebServiceProtocol.h */,
+				9933721B1BC507BF002C6A21 /* RadarAPIWrapper.h */,
+				9933721C1BC507BF002C6A21 /* RadarAPIWrapper.m */,
+			);
+			name = Net;
+			sourceTree = "<group>";
+		};
+		9933721E1BC51C5D002C6A21 /* JSONModelMapper */ = {
+			isa = PBXGroup;
+			children = (
+				9933721F1BC51D43002C6A21 /* JSONParser.h */,
+				993372201BC51D43002C6A21 /* JSONParser.m */,
+			);
+			name = JSONModelMapper;
+			sourceTree = "<group>";
+		};
+		993372291BC557E3002C6A21 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				9933722A1BC55861002C6A21 /* OneRadarResultStub.json */,
+				99CA237C1BC6A93400D1B573 /* EmptyRadarsArrayStub.json */,
+			);
+			name = Stubs;
+			sourceTree = "<group>";
+		};
+		9933722C1BC562B4002C6A21 /* TestUtils */ = {
+			isa = PBXGroup;
+			children = (
+				9933722D1BC562E4002C6A21 /* StubFileUtil.h */,
+				9933722E1BC562E4002C6A21 /* StubFileUtil.m */,
+			);
+			name = TestUtils;
+			sourceTree = "<group>";
+		};
+		99AE34891BC3D71100CAC424 = {
+			isa = PBXGroup;
+			children = (
+				99AE34941BC3D71100CAC424 /* BeautifulRadars */,
+				99AE34AE1BC3D71100CAC424 /* BeautifulRadarsTests */,
+				99AE34B91BC3D71100CAC424 /* BeautifulRadarsUITests */,
+				99AE34931BC3D71100CAC424 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99AE34931BC3D71100CAC424 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99AE34921BC3D71100CAC424 /* BeautifulRadars.app */,
+				99AE34AB1BC3D71100CAC424 /* BeautifulRadarsTests.xctest */,
+				99AE34B61BC3D71100CAC424 /* BeautifulRadarsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99AE34941BC3D71100CAC424 /* BeautifulRadars */ = {
+			isa = PBXGroup;
+			children = (
+				99AE34981BC3D71100CAC424 /* AppDelegate.h */,
+				99AE34991BC3D71100CAC424 /* AppDelegate.m */,
+				99AE34CA1BC3D73900CAC424 /* Model */,
+				99AE34C81BC3D71900CAC424 /* View */,
+				99AE34C91BC3D72D00CAC424 /* Controller */,
+				99AE34CB1BC3D75200CAC424 /* Util */,
+				99AE34A11BC3D71100CAC424 /* Assets.xcassets */,
+				99AE34A61BC3D71100CAC424 /* Info.plist */,
+				99AE34951BC3D71100CAC424 /* Supporting Files */,
+			);
+			path = BeautifulRadars;
+			sourceTree = "<group>";
+		};
+		99AE34951BC3D71100CAC424 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				99AE34961BC3D71100CAC424 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99AE34AE1BC3D71100CAC424 /* BeautifulRadarsTests */ = {
+			isa = PBXGroup;
+			children = (
+				9933722C1BC562B4002C6A21 /* TestUtils */,
+				993372291BC557E3002C6A21 /* Stubs */,
+				99AE34B11BC3D71100CAC424 /* Info.plist */,
+				99AE34D51BC3DBEF00CAC424 /* RadarTests.m */,
+				993372271BC54D7E002C6A21 /* JSONParserTests.m */,
+			);
+			path = BeautifulRadarsTests;
+			sourceTree = "<group>";
+		};
+		99AE34B91BC3D71100CAC424 /* BeautifulRadarsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				99AE34BA1BC3D71100CAC424 /* BeautifulRadarsUITests.m */,
+				99AE34BC1BC3D71100CAC424 /* Info.plist */,
+			);
+			path = BeautifulRadarsUITests;
+			sourceTree = "<group>";
+		};
+		99AE34C81BC3D71900CAC424 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99AE34A31BC3D71100CAC424 /* Storyboard.storyboard */,
+				99AE34E61BC406FA00CAC424 /* RadarCell.h */,
+				99AE34E71BC406FA00CAC424 /* RadarCell.m */,
+				99AE34EC1BC419AB00CAC424 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		99AE34C91BC3D72D00CAC424 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				99AE34E91BC40A6100CAC424 /* RadarsViewController.h */,
+				99AE34EA1BC40A6100CAC424 /* RadarsViewController.m */,
+				99CA23821BC6B1E900D1B573 /* RadarsViewController+DFNSFetchResultsController.h */,
+				99CA23831BC6B1E900D1B573 /* RadarsViewController+DFNSFetchResultsController.m */,
+				99AE34EE1BC4238A00CAC424 /* EditRadarViewController.h */,
+				99AE34EF1BC4238A00CAC424 /* EditRadarViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		99AE34CA1BC3D73900CAC424 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99CA237E1BC6AA3600D1B573 /* Mappers */,
+				99AE34CF1BC3DA4A00CAC424 /* Radar+CoreDataProperties.h */,
+				99AE34D01BC3DA4A00CAC424 /* Radar+CoreDataProperties.m */,
+				99AE34D11BC3DA4A00CAC424 /* Radar.h */,
+				99AE34D21BC3DA4A00CAC424 /* Radar.m */,
+				99AE34CC1BC3D80500CAC424 /* Model.xcdatamodeld */,
+				99CA23761BC694FE00D1B573 /* RadarJSON.h */,
+				99CA23771BC694FE00D1B573 /* RadarJSON.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		99AE34CB1BC3D75200CAC424 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9933721E1BC51C5D002C6A21 /* JSONModelMapper */,
+				993372191BC50534002C6A21 /* Net */,
+				99AE34D71BC3DC5800CAC424 /* CoreDataStack.h */,
+				99AE34D81BC3DC5800CAC424 /* CoreDataStack.m */,
+				99AE34D91BC3DC5800CAC424 /* FileUtils.h */,
+				99AE34DA1BC3DC5800CAC424 /* FileUtils.m */,
+				99AE34DB1BC3DC5800CAC424 /* SharedCoreDataStack.h */,
+				99AE34DC1BC3DC5800CAC424 /* SharedCoreDataStack.m */,
+				99AE34E01BC3DEFF00CAC424 /* NSManagedObjectContext+DFInsertManagedObject.h */,
+				99AE34E11BC3DEFF00CAC424 /* NSManagedObjectContext+DFInsertManagedObject.m */,
+				99AE34E31BC3FF2100CAC424 /* FakeRadarGenerator.h */,
+				99AE34E41BC3FF2100CAC424 /* FakeRadarGenerator.m */,
+				99CA23791BC69C4E00D1B573 /* NSDate+DFFormatter.h */,
+				99CA237A1BC69C4E00D1B573 /* NSDate+DFFormatter.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		99CA237E1BC6AA3600D1B573 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				99CA237F1BC6AA5E00D1B573 /* JSONRadarMapper.h */,
+				99CA23801BC6AA5E00D1B573 /* JSONRadarMapper.m */,
+			);
+			name = Mappers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99AE34911BC3D71100CAC424 /* BeautifulRadars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99AE34BF1BC3D71100CAC424 /* Build configuration list for PBXNativeTarget "BeautifulRadars" */;
+			buildPhases = (
+				99AE348E1BC3D71100CAC424 /* Sources */,
+				99AE348F1BC3D71100CAC424 /* Frameworks */,
+				99AE34901BC3D71100CAC424 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeautifulRadars;
+			productName = BeautifulRadars;
+			productReference = 99AE34921BC3D71100CAC424 /* BeautifulRadars.app */;
+			productType = "com.apple.product-type.application";
+		};
+		99AE34AA1BC3D71100CAC424 /* BeautifulRadarsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99AE34C21BC3D71100CAC424 /* Build configuration list for PBXNativeTarget "BeautifulRadarsTests" */;
+			buildPhases = (
+				99AE34A71BC3D71100CAC424 /* Sources */,
+				99AE34A81BC3D71100CAC424 /* Frameworks */,
+				99AE34A91BC3D71100CAC424 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99AE34AD1BC3D71100CAC424 /* PBXTargetDependency */,
+			);
+			name = BeautifulRadarsTests;
+			productName = BeautifulRadarsTests;
+			productReference = 99AE34AB1BC3D71100CAC424 /* BeautifulRadarsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		99AE34B51BC3D71100CAC424 /* BeautifulRadarsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99AE34C51BC3D71100CAC424 /* Build configuration list for PBXNativeTarget "BeautifulRadarsUITests" */;
+			buildPhases = (
+				99AE34B21BC3D71100CAC424 /* Sources */,
+				99AE34B31BC3D71100CAC424 /* Frameworks */,
+				99AE34B41BC3D71100CAC424 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99AE34B81BC3D71100CAC424 /* PBXTargetDependency */,
+			);
+			name = BeautifulRadarsUITests;
+			productName = BeautifulRadarsUITests;
+			productReference = 99AE34B61BC3D71100CAC424 /* BeautifulRadarsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99AE348A1BC3D71100CAC424 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Diego Freniche Brito";
+				TargetAttributes = {
+					99AE34911BC3D71100CAC424 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					99AE34AA1BC3D71100CAC424 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 99AE34911BC3D71100CAC424;
+					};
+					99AE34B51BC3D71100CAC424 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 99AE34911BC3D71100CAC424;
+					};
+				};
+			};
+			buildConfigurationList = 99AE348D1BC3D71100CAC424 /* Build configuration list for PBXProject "BeautifulRadars" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 99AE34891BC3D71100CAC424;
+			productRefGroup = 99AE34931BC3D71100CAC424 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99AE34911BC3D71100CAC424 /* BeautifulRadars */,
+				99AE34AA1BC3D71100CAC424 /* BeautifulRadarsTests */,
+				99AE34B51BC3D71100CAC424 /* BeautifulRadarsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99AE34901BC3D71100CAC424 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99AE34ED1BC419AB00CAC424 /* LaunchScreen.storyboard in Resources */,
+				99AE34A51BC3D71100CAC424 /* Storyboard.storyboard in Resources */,
+				99AE34A21BC3D71100CAC424 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99AE34A91BC3D71100CAC424 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99CA237D1BC6A93400D1B573 /* EmptyRadarsArrayStub.json in Resources */,
+				9933722B1BC55861002C6A21 /* OneRadarResultStub.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99AE34B41BC3D71100CAC424 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99AE348E1BC3D71100CAC424 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99AE34E81BC406FA00CAC424 /* RadarCell.m in Sources */,
+				99CA23811BC6AA5E00D1B573 /* JSONRadarMapper.m in Sources */,
+				99AE34D41BC3DA4A00CAC424 /* Radar.m in Sources */,
+				99AE34DD1BC3DC5800CAC424 /* CoreDataStack.m in Sources */,
+				99AE34E21BC3DEFF00CAC424 /* NSManagedObjectContext+DFInsertManagedObject.m in Sources */,
+				99AE349A1BC3D71100CAC424 /* AppDelegate.m in Sources */,
+				9933721D1BC507BF002C6A21 /* RadarAPIWrapper.m in Sources */,
+				99AE34D31BC3DA4A00CAC424 /* Radar+CoreDataProperties.m in Sources */,
+				99AE34F01BC4238A00CAC424 /* EditRadarViewController.m in Sources */,
+				993372211BC51D43002C6A21 /* JSONParser.m in Sources */,
+				99AE34E51BC3FF2100CAC424 /* FakeRadarGenerator.m in Sources */,
+				99CA23781BC694FE00D1B573 /* RadarJSON.m in Sources */,
+				99CA237B1BC69C4E00D1B573 /* NSDate+DFFormatter.m in Sources */,
+				99AE34971BC3D71100CAC424 /* main.m in Sources */,
+				99AE34CE1BC3D80500CAC424 /* Model.xcdatamodeld in Sources */,
+				99CA23841BC6B1E900D1B573 /* RadarsViewController+DFNSFetchResultsController.m in Sources */,
+				99AE34EB1BC40A6100CAC424 /* RadarsViewController.m in Sources */,
+				99AE34DE1BC3DC5800CAC424 /* FileUtils.m in Sources */,
+				99AE34DF1BC3DC5800CAC424 /* SharedCoreDataStack.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99AE34A71BC3D71100CAC424 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				993372281BC54D7E002C6A21 /* JSONParserTests.m in Sources */,
+				9933722F1BC562E4002C6A21 /* StubFileUtil.m in Sources */,
+				99AE34D61BC3DBEF00CAC424 /* RadarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99AE34B21BC3D71100CAC424 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99AE34BB1BC3D71100CAC424 /* BeautifulRadarsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99AE34AD1BC3D71100CAC424 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99AE34911BC3D71100CAC424 /* BeautifulRadars */;
+			targetProxy = 99AE34AC1BC3D71100CAC424 /* PBXContainerItemProxy */;
+		};
+		99AE34B81BC3D71100CAC424 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99AE34911BC3D71100CAC424 /* BeautifulRadars */;
+			targetProxy = 99AE34B71BC3D71100CAC424 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99AE34A31BC3D71100CAC424 /* Storyboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99AE34A41BC3D71100CAC424 /* Base */,
+			);
+			name = Storyboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99AE34BD1BC3D71100CAC424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		99AE34BE1BC3D71100CAC424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99AE34C01BC3D71100CAC424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BeautifulRadars/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.BeautifulRadars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		99AE34C11BC3D71100CAC424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BeautifulRadars/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.BeautifulRadars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		99AE34C31BC3D71100CAC424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BeautifulRadarsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.BeautifulRadarsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeautifulRadars.app/BeautifulRadars";
+			};
+			name = Debug;
+		};
+		99AE34C41BC3D71100CAC424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BeautifulRadarsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.BeautifulRadarsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeautifulRadars.app/BeautifulRadars";
+			};
+			name = Release;
+		};
+		99AE34C61BC3D71100CAC424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BeautifulRadarsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.BeautifulRadarsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BeautifulRadars;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		99AE34C71BC3D71100CAC424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BeautifulRadarsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.BeautifulRadarsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BeautifulRadars;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99AE348D1BC3D71100CAC424 /* Build configuration list for PBXProject "BeautifulRadars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99AE34BD1BC3D71100CAC424 /* Debug */,
+				99AE34BE1BC3D71100CAC424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99AE34BF1BC3D71100CAC424 /* Build configuration list for PBXNativeTarget "BeautifulRadars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99AE34C01BC3D71100CAC424 /* Debug */,
+				99AE34C11BC3D71100CAC424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99AE34C21BC3D71100CAC424 /* Build configuration list for PBXNativeTarget "BeautifulRadarsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99AE34C31BC3D71100CAC424 /* Debug */,
+				99AE34C41BC3D71100CAC424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99AE34C51BC3D71100CAC424 /* Build configuration list for PBXNativeTarget "BeautifulRadarsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99AE34C61BC3D71100CAC424 /* Debug */,
+				99AE34C71BC3D71100CAC424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		99AE34CC1BC3D80500CAC424 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				993372391BC56D58002C6A21 /* Model 2.xcdatamodel */,
+				99AE34CD1BC3D80500CAC424 /* Model.xcdatamodel */,
+			);
+			currentVersion = 99AE34CD1BC3D80500CAC424 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 99AE348A1BC3D71100CAC424 /* Project object */;
+}
