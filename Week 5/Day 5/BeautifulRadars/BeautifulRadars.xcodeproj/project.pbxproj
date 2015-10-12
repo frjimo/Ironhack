@@ -35,6 +35,7 @@
 		99CA237D1BC6A93400D1B573 /* EmptyRadarsArrayStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 99CA237C1BC6A93400D1B573 /* EmptyRadarsArrayStub.json */; settings = {ASSET_TAGS = (); }; };
 		99CA23811BC6AA5E00D1B573 /* JSONRadarMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CA23801BC6AA5E00D1B573 /* JSONRadarMapper.m */; settings = {ASSET_TAGS = (); }; };
 		99CA23841BC6B1E900D1B573 /* RadarsViewController+DFNSFetchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CA23831BC6B1E900D1B573 /* RadarsViewController+DFNSFetchResultsController.m */; settings = {ASSET_TAGS = (); }; };
+		A158C3D71BC7A7420098FF22 /* FetchedAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A158C3D61BC7A7420098FF22 /* FetchedAdapter.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,8 @@
 		99CA23801BC6AA5E00D1B573 /* JSONRadarMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONRadarMapper.m; sourceTree = "<group>"; };
 		99CA23821BC6B1E900D1B573 /* RadarsViewController+DFNSFetchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RadarsViewController+DFNSFetchResultsController.h"; sourceTree = "<group>"; };
 		99CA23831BC6B1E900D1B573 /* RadarsViewController+DFNSFetchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RadarsViewController+DFNSFetchResultsController.m"; sourceTree = "<group>"; };
+		A158C3D51BC7A7420098FF22 /* FetchedAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchedAdapter.h; sourceTree = "<group>"; };
+		A158C3D61BC7A7420098FF22 /* FetchedAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchedAdapter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +268,7 @@
 		99AE34CA1BC3D73900CAC424 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A158C3D11BC7A6C70098FF22 /* Adapter */,
 				99CA237E1BC6AA3600D1B573 /* Mappers */,
 				99AE34CF1BC3DA4A00CAC424 /* Radar+CoreDataProperties.h */,
 				99AE34D01BC3DA4A00CAC424 /* Radar+CoreDataProperties.m */,
@@ -305,6 +309,15 @@
 				99CA23801BC6AA5E00D1B573 /* JSONRadarMapper.m */,
 			);
 			name = Mappers;
+			sourceTree = "<group>";
+		};
+		A158C3D11BC7A6C70098FF22 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				A158C3D51BC7A7420098FF22 /* FetchedAdapter.h */,
+				A158C3D61BC7A7420098FF22 /* FetchedAdapter.m */,
+			);
+			name = Adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +471,7 @@
 				99AE34EB1BC40A6100CAC424 /* RadarsViewController.m in Sources */,
 				99AE34DE1BC3DC5800CAC424 /* FileUtils.m in Sources */,
 				99AE34DF1BC3DC5800CAC424 /* SharedCoreDataStack.m in Sources */,
+				A158C3D71BC7A7420098FF22 /* FetchedAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
