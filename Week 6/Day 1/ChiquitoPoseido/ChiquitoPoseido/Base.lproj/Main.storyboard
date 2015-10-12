@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="escapada" translatesAutoresizingMaskIntoConstraints="NO" id="h0F-Fn-ks0">
+                                <rect key="frame" x="158" y="184" width="284" height="231"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="u9W-1r-T3J"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3G-Kp-PUT">
+                                <rect key="frame" x="285" y="49" width="30" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="📷"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4hm-lr-cMQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoT-vb-jk9">
+                                <rect key="frame" x="274" y="116" width="53" height="30"/>
+                                <state key="normal" title="Choose"/>
+                                <connections>
+                                    <action selector="chooseImageView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xxc-ug-SQ2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fd3-L8-dkp">
+                                <rect key="frame" x="358" y="116" width="65" height="30"/>
+                                <state key="normal" title="Party Jarl"/>
+                                <connections>
+                                    <action selector="partyJarl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DRF-Q0-IzT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FU-OF-66A">
+                                <rect key="frame" x="70" y="429" width="460" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EM-CK-q1f">
+                                <rect key="frame" x="369" y="20" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8EM-CK-q1f" firstAttribute="leading" secondItem="LoT-vb-jk9" secondAttribute="trailing" constant="42" id="0K1-lj-cVV"/>
+                            <constraint firstItem="h0F-Fn-ks0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1jU-ht-grA"/>
+                            <constraint firstItem="h0F-Fn-ks0" firstAttribute="top" secondItem="LoT-vb-jk9" secondAttribute="bottom" constant="38" id="458-Ud-WSK"/>
+                            <constraint firstItem="h0F-Fn-ks0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6Zh-Eh-bKx"/>
+                            <constraint firstItem="h0F-Fn-ks0" firstAttribute="top" secondItem="t3G-Kp-PUT" secondAttribute="bottom" constant="87" id="88t-2f-8Nj"/>
+                            <constraint firstItem="LoT-vb-jk9" firstAttribute="centerX" secondItem="t3G-Kp-PUT" secondAttribute="centerX" id="EQQ-IL-g5g"/>
+                            <constraint firstItem="fd3-L8-dkp" firstAttribute="leading" secondItem="LoT-vb-jk9" secondAttribute="trailing" constant="40" id="Ee5-Ev-FaI"/>
+                            <constraint firstItem="t3G-Kp-PUT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="KYV-yk-IjG"/>
+                            <constraint firstItem="LoT-vb-jk9" firstAttribute="top" secondItem="t3G-Kp-PUT" secondAttribute="bottom" constant="19" id="NGb-AL-Pf0"/>
+                            <constraint firstItem="fd3-L8-dkp" firstAttribute="leading" secondItem="t3G-Kp-PUT" secondAttribute="trailing" constant="52" id="SkQ-AZ-hFY"/>
+                            <constraint firstItem="8EM-CK-q1f" firstAttribute="leading" secondItem="t3G-Kp-PUT" secondAttribute="trailing" constant="54" id="YfN-Jz-kdZ"/>
+                            <constraint firstItem="fd3-L8-dkp" firstAttribute="top" secondItem="t3G-Kp-PUT" secondAttribute="bottom" constant="19" id="Zn4-fd-He4"/>
+                            <constraint firstItem="fd3-L8-dkp" firstAttribute="top" secondItem="8EM-CK-q1f" secondAttribute="bottom" constant="27" id="eAO-Fi-sno"/>
+                            <constraint firstItem="t3G-Kp-PUT" firstAttribute="centerX" secondItem="h0F-Fn-ks0" secondAttribute="centerX" id="qfU-bL-FGM"/>
+                            <constraint firstItem="h0F-Fn-ks0" firstAttribute="top" secondItem="fd3-L8-dkp" secondAttribute="bottom" constant="38" id="rz0-7P-vNb"/>
+                            <constraint firstItem="LoT-vb-jk9" firstAttribute="top" secondItem="8EM-CK-q1f" secondAttribute="bottom" constant="27" id="zi5-I0-2CY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="h0F-Fn-ks0" id="lnj-Uu-Asx"/>
+                        <outlet property="levelLabel" destination="8EM-CK-q1f" id="saH-bq-hgS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="328"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="escapada" width="552" height="552"/>
+    </resources>
+</document>
