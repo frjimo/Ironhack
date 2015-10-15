@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4EAC6A46B12055183D0E03EB34162BA9FA1EBC8D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DC18223934B917196E5F3B715858561F7A31DB73" : 0,
+    "4EAC6A46B12055183D0E03EB34162BA9FA1EBC8D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DEE01376-3CD7-4D6E-AC25-81E569809106",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DC18223934B917196E5F3B715858561F7A31DB73" : "Ironhack\/Week%206\/Day%204\/MemeRastreator\/MemeRastreator\/ColorCube\/",
+    "4EAC6A46B12055183D0E03EB34162BA9FA1EBC8D" : "Ironhack\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MemeRastreator",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Week 6\/Day 4\/MemeRastreator\/MemeRastreator.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/frjimo\/Ironhack.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4EAC6A46B12055183D0E03EB34162BA9FA1EBC8D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pixelogik\/ColorCube.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DC18223934B917196E5F3B715858561F7A31DB73"
+    }
+  ]
+}
